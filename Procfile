@@ -1,1 +1,1 @@
-web: python3 manage.py runserver
+web: gunicorn bloodcurdling-demon-72624.wsgi --log-file -
