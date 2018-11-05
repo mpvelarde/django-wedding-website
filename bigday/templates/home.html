@@ -95,7 +95,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/FryPhotos/HVailChapel.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/HVailChapel2.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#niagara" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/FryPhotos/HTheLodgeVail.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/VTheLodge.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/FryPhotos/HFakeProposal.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/FryPhotos/SquareFakeProposal.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -142,14 +142,20 @@
     <section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
     </section>
+
+{% comment %}
     <section id="gifts">
         {% include 'partials/gifts.html' %}
     </section>
+{% endcomment %}
     <section id="story" class="bg-dark">
         {% include 'partials/story.html' %}
     </section>
     {% include 'partials/proposal.html' %}
+{% comment %}
+
     {% include 'partials/save-the-dates.html' %}
+{% endcomment %}
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
