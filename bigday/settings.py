@@ -30,7 +30,7 @@ SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -63,6 +63,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join('bigday', 'templates'),
+            #uncomment this for the server
+            # os.path.join('django-wedding-website', 'bigday', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -131,6 +133,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
+
+#uncomment this for the server
+
+# STATIC_ROOT = 'static_root'
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (
+#      os.path.join('/home/dmckinno/django-wedding-website/bigday', 'static'),
+# )
 
 # the address your emails (save the dates/invites/etc.) will come from
 DEFAULT_WEDDING_FROM_EMAIL = 'You and Your Partner <daniel.mckinnon@colorado.edu>'
