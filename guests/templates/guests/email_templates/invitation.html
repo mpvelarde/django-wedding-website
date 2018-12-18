@@ -22,7 +22,7 @@
 {% block main_image %}
     {% with "invitation/images/"|add:main_image as main_static_url %}
     <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
-         alt="cory and rowena"
+         alt=""
          style="display: block; padding: 0; color: #666666;"
          class="img-max" border="0"
          height="512" width="512">

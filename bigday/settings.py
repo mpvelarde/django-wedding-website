@@ -142,7 +142,7 @@ STATICFILES_DIRS = (
 # )
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'You and Your Partner <daniel.mckinnon@colorado.edu>'
+DEFAULT_WEDDING_FROM_EMAIL = 'daniel.mckinnon@colorado.edu'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = 'daniel.mckinnon@colorado.edu'
 

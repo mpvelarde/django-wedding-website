@@ -49,7 +49,7 @@ def send_save_the_date_to_party(party, test_only=False):
 def get_template_id_from_party(party):
     if party.type == 'formal':
         # all formal guests get formal invites
-        return random.choice(['savethedate'])
+        return 'savethedate'
     elif party.type == 'dimagi':
         # all non-formal dimagis get dimagi invites
         return 'savethedate'
@@ -60,7 +60,7 @@ def get_template_id_from_party(party):
             # don't send the canada invitation to ro's crowd
             all_options.remove('savethedate')
         # otherwise choose randomly from all options for everyone else
-        return random.choice(all_options)
+        return 'savethedate'
     else:
         return None
 
@@ -68,13 +68,13 @@ def get_template_id_from_party(party):
 def get_save_the_date_context(template_id):
     template_id = (template_id or '').lower()
     if template_id not in SAVE_THE_DATE_CONTEXT_MAP:
-        template_id = 'lions-head'
+        template_id = 'savethedate'
     context = copy(SAVE_THE_DATE_CONTEXT_MAP[template_id])
     context['name'] = template_id
-    context['page_title'] = 'Cory and Rowena - Save the Date!'
+    context['page_title'] = 'Tori and Dan - Save our date!'
     context['preheader_text'] = (
         "The date that you've eagerly been waiting for is finally here. "
-        "Cory and Ro are getting married! Save the date!"
+        "Tori and Dan are getting married! Save the date!"
     )
     return context
 
