@@ -16,6 +16,8 @@ try:
 except ImportError:
     pass
 
+from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,6 +126,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+  ('es', _('Spanish')),
+  ('en', _('English')),
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -166,4 +174,3 @@ WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on al
 # The default is to use the SMTP backend.
 # Third-party backends can be specified by providing a Python path
 # to a module that defines an EmailBackend class.
-
