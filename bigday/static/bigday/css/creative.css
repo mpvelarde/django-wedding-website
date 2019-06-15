@@ -2,12 +2,7 @@
  * Modified from Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
-
- Orange text - 7c9bad ->  7c9bad
-
-
  */
-
 
 html,
 body {
@@ -17,12 +12,12 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 hr {
     max-width: 50px;
-    border-color: #7c9bad;
+    border-color: #f05f40;
     border-width: 3px;
 }
 
@@ -31,7 +26,7 @@ hr.light {
 }
 
 a {
-    color: #7c9bad;
+    color: #f05f40;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -48,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -59,7 +54,7 @@ p {
 
 
 .bg-primary {
-    background-color: #7c9bad;
+    background-color: #f05f40;
 }
 
 .bg-primary a {
@@ -88,25 +83,22 @@ aside {
     padding: 0;
 }
 
-/*!
- *Victoria Fry adjusted the background color to transparent to not block dan's face
- *If a different photo is available, better to change back to #fff
- */
-
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
+.navbar-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #7c9bad;
+    color: #f05f40;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -124,12 +116,12 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #7c9bad;
+    color: #f05f40;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #7c9bad!important;
+    color: #f05f40!important;
     background-color: transparent;
 }
 
@@ -141,7 +133,7 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(28,56,81,.3);
-        background-color: #fff;
+        background-color: transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -170,7 +162,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #7c9bad;
+        color: #f05f40;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -185,19 +177,17 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #7c9bad;
+        color: #f05f40;
     }
-
 }
 
 header {
     position: relative;
-    padding: 0px 0px;
-    width: auto;
-    min-height: 100%;
+    width: 100%;
+    min-height: auto;
     text-align: center;
     color: rgb(28,56,81);
-    background-position: 50% 20%;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -205,7 +195,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/FryPhotos/HSaveTheDatePhoto.jpg');
+    background-image: url('../images/edinburgh-castle.jpg');
 }
 
 header .header-content {
@@ -221,7 +211,6 @@ header .header-content .header-content-inner h1 {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
-    text-align: left;
 }
 
 header .header-content .header-content-inner hr {
@@ -236,7 +225,7 @@ header .header-content .header-content-inner p {
 }
 
 #second-header {
-    background-image: url('../images/FryPhotos/maupiti.jpg');
+    background-image: url('../images/chapmans-peak-view.jpg');
 }
 
 @media(min-width:768px) {
@@ -245,7 +234,7 @@ header .header-content .header-content-inner p {
     }
 
     header.secondary {
-        min-height: 100%;
+        min-height: 30%;
     }
 
     header .header-content {
@@ -260,13 +249,13 @@ header .header-content .header-content-inner p {
     header .header-content .header-content-inner {
         margin-right: auto;
         margin-left: auto;
-        max-width: auto;
+        max-width: 1000px;
     }
 
     header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
-        max-width: 100%;
+        max-width: 80%;
         font-size: 18px;
     }
 }
@@ -335,7 +324,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -367,7 +356,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #7c9bad;
+    color: #f05f40;
 }
 
 .no-gutter > [class*=col-] {
@@ -429,9 +418,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #7c9bad;
+    border-color: #f05f40;
     color: #fff;
-    background-color: #7c9bad;
+    background-color: #f05f40;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -472,12 +461,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #7c9bad;
-    background-color: #7c9bad;
+    border-color: #f05f40;
+    background-color: #f05f40;
 }
 
 .btn-primary .badge {
-    color: #7c9bad;
+    color: #f05f40;
     background-color: #fff;
 }
 
@@ -485,7 +474,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
@@ -519,216 +508,6 @@ body {
     webkit-tap-highlight-color: #222;
 
 }
-/*
-.carousel {
-  position: relative;
-}
-
-.carousel.pointer-event {
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-}
-
-.carousel-inner {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.carousel-inner::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: -webkit-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
-}
-
-.carousel-item img{
-  width:100%;
-  height:350px;
-  object-fit: cover;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .carousel-item {
-    transition: none;
-  }
-}
-
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
-  display: block;
-}
-
-.carousel-item-next:not(.carousel-item-left),
-.active.carousel-item-right {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-
-.carousel-item-prev:not(.carousel-item-right),
-.active.carousel-item-left {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.carousel-fade .carousel-item {
-  opacity: 0;
-  transition-property: opacity;
-  -webkit-transform: none;
-  transform: none;
-}
-
-.carousel-fade .carousel-item.active,
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-  z-index: 1;
-  opacity: 1;
-}
-
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-  z-index: 0;
-  opacity: 0;
-  transition: 0s 0.6s opacity;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .carousel-fade .active.carousel-item-left,
-  .carousel-fade .active.carousel-item-right {
-    transition: none;
-  }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 15%;
-  color: #fff;
-  text-align: center;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    transition: none;
-  }
-}
-
-.carousel-control-prev:hover, .carousel-control-prev:focus,
-.carousel-control-next:hover,
-.carousel-control-next:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: 0.9;
-}
-
-.carousel-control-prev {
-  left: 0;
-}
-
-.carousel-control-next {
-  right: 0;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: transparent no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
-}
-
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  list-style: none;
-}
-
-.carousel-indicators li {
-  box-sizing: content-box;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  transition: opacity 0.6s ease;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .carousel-indicators li {
-    transition: none;
-  }
-}
-
-.carousel-indicators .active {
-  opacity: 1;
-}
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-*/
 
 #footer {
     background-color: #222;
