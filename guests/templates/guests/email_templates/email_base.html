@@ -47,6 +47,11 @@
         body {
             margin: 0;
             padding: 0;
+            background: #f0f1f3;
+        }
+
+        html{
+          background: #f0f1f3;
         }
 
         img {
@@ -151,13 +156,13 @@
         {% include "partials/google-analytics.html" %}
     {% endif %}
 </head>
-<body bgcolor="#FFFFFF" text="#000000">
+<body>
 <title>{{ page_title }}</title>
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
         <td style="padding: 20px 15px 20px 15px;"
-            class="section-header" align="center" bgcolor="#ffffff"
+            class="section-header" align="center"
             width="100%">
             <!-- HIDDEN PREHEADER TEXT -->
             <div style="display: none; font-size: 1px; color: #fefefe;
@@ -175,13 +180,7 @@
                                cellspacing="0">
                             <tbody>
                             <tr>
-                                <td align="center" bgcolor="#ffffff">
-                                    {% with "save-the-date/images/"|add:header_filename as header_filepath %}
-                                        <img src="{% if email_mode %}cid:{{ header_filename }}{% else %}{% static header_filepath %}{% endif %}"
-                                             style="display: inline-block; align-content:center; font-size: 16px;"
-                                             border="0"
-                                         height="120" width="120">
-                                    {% endwith %}
+                                <td align="center">
                                 </td>
                             </tr>
                             </tbody>
@@ -240,7 +239,7 @@
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
-        <td align="center" bgcolor="#ffffff">
+        <td align="center">
             <table align="center" border="0" width="100%" cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>

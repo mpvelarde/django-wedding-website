@@ -17,8 +17,8 @@ SAVE_THE_DATE_CONTEXT_MAP = {
         'savethedate': {
             'title': 'savethedate',
             'header_filename': 'Logo.png',
-            'main_image': 'savethedate.jpg',
-            'main_color': '#ffffff',
+            'main_image': 'save-the-date.jpeg',
+            'main_color': '#f0f1f3',
             'font_color': '#000000',
         }
     }
