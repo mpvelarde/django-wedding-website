@@ -65,8 +65,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join('bigday', 'templates'),
-            #uncomment this for the server
-            # os.path.join('django-wedding-website', 'bigday', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,36 +133,27 @@ LANGUAGES = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = 'static_root'
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
 
-#uncomment this for the server
-
-# STATIC_ROOT = 'static_root'
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = (
-#      os.path.join('/home/dmckinno/django-wedding-website/bigday', 'static'),
-# )
-
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'daniel.mckinnon@colorado.edu'
+DEFAULT_WEDDING_FROM_EMAIL = 'x@gmail.com'
 # the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = 'daniel.mckinnon@colorado.edu'
+DEFAULT_WEDDING_REPLY_EMAIL = 'x@gmail.com'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'x@gmail.com'
+EMAIL_HOST_PASSWORD = 'your account’s password'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# Host for sending e-mail.
-EMAIL_HOST = 'localhost'
-
-# Port for sending e-mail.
-EMAIL_PORT = 1025
-
-# Optional SMTP authentication information for EMAIL_HOST.
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
