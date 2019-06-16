@@ -1,7 +1,7 @@
 {% extends 'guests/email_templates/email_base.html' %}
 {% load staticfiles %}
 {% block main_image %}
-    <a href="http://www.McFryWedding.com/"
+    <a href="http://www.danielandmaria.com"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
         <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
@@ -17,10 +17,10 @@
 {% block footer_content %}
     <p>
     </p>
-    Please visit www.danielandmaria2020.com for more info.
+    Please visit www.danielandmaria.com for more info.
     <p></p>
     Can't make it? Let us know at <a class="moz-txt-link-abbreviated" href="mailto:{{ rsvp_address }}">{{ rsvp_address }}</a>.
     {% if email_mode %}
-        <p><a href="https://www.danielandmaria2020.com">www.danielandmaria2020.com</a></p>
+        <p><a href="https://www.danielandmaria.com">www.danielandmaria.com</a></p>
     {% endif %}
 {% endblock %}

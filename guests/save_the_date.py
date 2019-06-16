@@ -17,7 +17,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
         'savethedate': {
             'title': 'savethedate',
             'header_filename': 'Logo.png',
-            'main_image': 'save-the-date.jpeg',
+            'main_image': 'save-the-date-purple.jpeg',
             'main_color': '#f0f1f3',
             'font_color': '#000000',
         }
@@ -71,10 +71,10 @@ def get_save_the_date_context(template_id):
         template_id = 'savethedate'
     context = copy(SAVE_THE_DATE_CONTEXT_MAP[template_id])
     context['name'] = template_id
-    context['page_title'] = 'Tori and Dan - Save our date!'
+    context['page_title'] = 'Daniel and Maria Paz - Save our date!'
     context['preheader_text'] = (
         "The date that you've eagerly been waiting for is finally here. "
-        "Tori and Dan are getting married! Save the date!"
+        "Daniel and Maria Paz are getting married! Save the date!"
     )
     return context
 
