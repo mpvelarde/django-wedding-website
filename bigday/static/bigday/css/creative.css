@@ -64,7 +64,11 @@ p {
 
 .bg-dark {
     color: #fff;
-    background-color: #222;
+    background-color: #514b61;
+}
+
+.bg-info {
+    background-color: #e3e6e6;
 }
 
 .text-faded {
@@ -323,7 +327,7 @@ header .header-content .header-content-inner {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: rgba(206, 144, 190,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
