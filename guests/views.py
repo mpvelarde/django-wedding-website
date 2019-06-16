@@ -138,6 +138,7 @@ def save_the_date_random(request):
 def save_the_date_preview(request, template_id):
     context = get_save_the_date_context(template_id)
     context['email_mode'] = False
+    context['rsvp_address'] = settings.DEFAULT_WEDDING_REPLY_EMAIL
     return render(request, SAVE_THE_DATE_TEMPLATE, context=context)
 
 
