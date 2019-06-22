@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -124,6 +125,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+ugettext = lambda s: s
 LANGUAGES = [
   ('es', _('Spanish')),
   ('en', _('English')),
