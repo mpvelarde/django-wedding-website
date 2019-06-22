@@ -60,6 +60,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bigday.urls'
 
+LOCALE_PATHS = ( os.path.join(BASE_DIR, 'locale'), )
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -128,9 +130,8 @@ USE_TZ = True
 ugettext = lambda s: s
 LANGUAGES = [
   ('es', _('Spanish')),
-  ('en', _('English')),
+  ('en-uk', _('English')),
 ]
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
