@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-22 11:52+0100\n"
+"POT-Creation-Date: 2019-06-22 13:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: .\bigday\settings.py:130
+#: .\bigday\settings.py:132
 msgid "Spanish"
 msgstr ""
 
-#: .\bigday\settings.py:131
+#: .\bigday\settings.py:133
 msgid "English"
+msgstr ""
+
+#: .\bigday\templates\home.html:25
+msgid "Home"
+msgstr ""
+
+#: .\bigday\templates\home.html:28
+msgid "Event"
+msgstr ""
+
+#: .\bigday\templates\home.html:31
+msgid "Everything Else"
+msgstr ""
+
+#: .\bigday\templates\home.html:34
+msgid "Contact"
+msgstr ""
+
+#: .\bigday\templates\home.html:46
+msgid "Daniel and Maria Paz"
+msgstr ""
+
+#: .\bigday\templates\home.html:49
+msgid "May 1st, 2020"
+msgstr ""
+
+#: .\bigday\templates\home.html:51
+msgid "July 11th, 2020"
+msgstr ""
+
+#: .\bigday\templates\home.html:59
+msgid "Welcome!"
+msgstr ""
+
+#: .\bigday\templates\home.html:62
+msgid "Hello friends and family!"
+msgstr ""
+
+#: .\bigday\templates\home.html:65
+msgid "Thanks for sharing our wedding celebrations with us!"
+msgstr ""
+
+#: .\bigday\templates\home.html:66
+msgid ""
+"As we wait for/figure out the big day, we have created this website to keep "
+"you up-to-date with everything."
+msgstr ""
+
+#: .\bigday\templates\home.html:69
+msgid "Looking forward to celebrate with you!"
+msgstr ""
+
+#: .\bigday\templates\home.html:71
+msgid "- Daniel and Maria Paz"
+msgstr ""
+
+#: .\bigday\templates\home.html:85
+msgid "Guayaquil"
+msgstr ""
+
+#: .\bigday\templates\home.html:97
+msgid "Murrayshall"
+msgstr ""
+
+#: .\bigday\templates\home.html:109
+msgid "Our Story"
+msgstr ""
+
+#: .\bigday\templates\home.html:130
+msgid "Contact us!"
+msgstr ""
+
+#: .\bigday\templates\home.html:132
+msgid "If you have any questions don't hesitate to reach out!"
 msgstr ""
 
 #: .\myvenv\Lib\site-packages\django\contrib\messages\apps.py:7
