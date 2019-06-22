@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 {% block page_head %}
     <!-- Custom CSS -->
@@ -61,8 +62,8 @@
                         {% trans "Hello friends and family!" %}
                     </p>
                     <p>
-                        {% trans "Thanks for sharing our wedding celebrations with us!
-                        As we wait for/figure out the big day, we have created this website to keep you up-to-date with everything." %}
+                        {% blocktrans %}{{ Thanks for sharing our wedding celebrations with us!
+                        As we wait for/figure out the big day, we have created this website to keep you up-to-date with everything. }}{% endblocktrans %}
                     </p>
                     <p>
                         {% trans "Looking forward to celebrate with you!" %}
