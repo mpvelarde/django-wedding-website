@@ -143,16 +143,16 @@ STATICFILES_DIRS = (
 )
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'x@gmail.com'
+DEFAULT_WEDDING_FROM_EMAIL = 'danielandmaria2020@gmail.com'
 # the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = 'x@gmail.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'danielandmaria2020@gmail.com'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'x@gmail.com'
+EMAIL_HOST_USER = 'danielandmaria2020@gmail.com'
 EMAIL_HOST_PASSWORD = 'your account’s password'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

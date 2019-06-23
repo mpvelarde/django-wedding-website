@@ -1,13 +1,14 @@
+{% load i18n %}
 <header id="second-header" class="secondary"></header>
-<h5 class="text-center text-muted">Princess Street Gardens in the summer.</h5>
+<h5 class="text-center text-muted">{% trans "Princess Street Gardens in the summer." %}</h5>
 <section id="proposal">
     <div class="container">
         <div class="col-lg-12">
-            <h2 class="section-heading text-center">The Proposal</h2>
+            <h2 class="section-heading text-center">{% trans "The Proposal" %}</h2>
             <hr class="primary">
             <p>
-                After 2 years living together Daniel and Maria went on a roadtrip to the west of Scotland.
-                Daniel proposed at Stonefield Castle, passing all the Tarbets, it was almost Valentine's Day... or maybe after.
+                {% blocktrans %}After 2 years living together Daniel and Maria went on a roadtrip to the west of Scotland.
+                Daniel proposed at Stonefield Castle, passing all the Tarbets, it was almost Valentine's Day... or maybe after.{% endblocktrans %}
             </p>
         </div>
     </div>

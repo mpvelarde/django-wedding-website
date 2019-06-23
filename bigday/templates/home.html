@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Daniel and Maria Paz</a>
+                <a class="navbar-brand page-scroll" href="#page-top">{% trans "Daniel and Maria Paz" %}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -45,9 +45,9 @@
             <div class="header-content-inner">
                 <h2>{% trans "Daniel and Maria Paz" %}</h2>
                 <hr>
-                <h3>Scone, Perth, Uk</h3>
+                <h3>{% trans "Scone, Perth, UK" %}</h3>
                 <p>{% trans "May 1st, 2020" %}</p>
-                <h3>Guayaquil, Guayas, Ecuador</h3>
+                <h3>{% trans "Guayaquil, Guayas, Ecuador" %}</h3>
                 <p>{% trans "July 11th, 2020" %}</p>
             </div>
         </div>
@@ -62,8 +62,9 @@
                         {% trans "Hello friends and family!" %}
                     </p>
                     <p>
-                        {% blocktrans %}{{ Thanks for sharing our wedding celebrations with us!
-                        As we wait for/figure out the big day, we have created this website to keep you up-to-date with everything. }}{% endblocktrans %}
+                        {% trans "Thanks for sharing our wedding celebrations with us!" %}
+                        {% trans "As we wait for/figure out the big day, " %}
+                        {% trans "we have created this website to keep you up-to-date with everything." %}
                     </p>
                     <p>
                         {% trans "Looking forward to celebrate with you!" %}
