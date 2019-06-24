@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-23 23:22+0100\n"
+"POT-Creation-Date: 2019-06-24 22:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgstr "¡Esperamos celebrar contigo!"
 msgid "- Daniel and Maria Paz"
 msgstr "- Daniel y María Paz."
 
-#: bigday/templates/home.html:86 bigday/templates/partials/event.html:39
+#: bigday/templates/home.html:86 bigday/templates/partials/event.html:35
 msgid "Guayaquil"
 msgstr "Guayaquil"
 
@@ -112,54 +112,34 @@ msgid "If you have any questions don't hesitate to reach out!"
 msgstr "¡Si tienes alguna pregunta no dudes en contactarnos!"
 
 #: bigday/templates/partials/event.html:6
-msgid "Scottish Celebration"
-msgstr "Celebración Escosesa"
+msgid "Civil Wedding"
+msgstr "Matrimonio Civil"
 
 #: bigday/templates/partials/event.html:9
-#: bigday/templates/partials/event.html:33
-msgid "What"
-msgstr "Qué"
-
-#: bigday/templates/partials/event.html:10
-#, fuzzy
-#| msgid ""
-#| "Celebrate our marriage at Murrayshall Country House Hotel... and Golf Club"
-msgid ""
-"Join us for the serious bit followed by some Ceilidh dancing at Celebrate "
-"our marriage at Murrayshall Country House Hotel... and Golf Club"
-msgstr ""
-"Acompañanos para la parte seria seguida por un ceilidh en el Murrayshall Country House Hotel... y Club "
-"de Golf"
-
-#: bigday/templates/partials/event.html:11
-#: bigday/templates/partials/event.html:35
+#: bigday/templates/partials/event.html:31
 msgid "When"
 msgstr "Cuándo"
 
-#: bigday/templates/partials/event.html:12
-msgid "Saturday, May 1st, 2020, 2:00 pm"
+#: bigday/templates/partials/event.html:10
+#, fuzzy
+#| msgid "Saturday, May 1st, 2020, 2:00 pm"
+msgid "Friday, May 1st, 2020, 2:00 pm"
 msgstr "Sábado, 1ro de mayo, 2020, 2:00 pm"
 
-#: bigday/templates/partials/event.html:13
-#: bigday/templates/partials/event.html:37
+#: bigday/templates/partials/event.html:11
+#: bigday/templates/partials/event.html:33
 msgid "Where"
 msgstr "Dónde"
 
-#: bigday/templates/partials/event.html:15
+#: bigday/templates/partials/event.html:13
 msgid "Murrayshall Country House Hotel"
 msgstr ""
 
-#: bigday/templates/partials/event.html:30
-msgid "Ecuadorian Celebration"
-msgstr "Celebración Ecuatoriana"
+#: bigday/templates/partials/event.html:28
+msgid "Church Wedding"
+msgstr "Matrimonio Eclesiástico"
 
-#: bigday/templates/partials/event.html:34
-#, fuzzy
-msgid ""
-"Join us for a latin american celebration in Maria's hometown, Guayaquil."
-msgstr "Acompáñanos a celebrar nuestro matrimonio en Guayaquil."
-
-#: bigday/templates/partials/event.html:36
+#: bigday/templates/partials/event.html:32
 msgid "Saturday, July 11 2020"
 msgstr "Sábado, 11 de julio del 2020"
 
@@ -263,7 +243,7 @@ msgid ""
 msgstr ""
 "Vivimos juntos por 2 años en Edimburgo, en un departamento en Cochran "
 "Terrace casi en New Town. Ahora vivimos en Londres, pasamos nuestro tiempo "
-"conociendo esta ciudad y planeando nuestra boda."
+"conociendo la ciudad y planeando nuestra boda."
 
 #: bigday/templates/partials/story.html:26
 msgid ""
@@ -1632,3 +1612,28 @@ msgstr "Comunidad Django"
 #: myvenv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:408
 msgid "Connect, get help, or contribute"
 msgstr "Conéctate, consigue ayuda, o contribuye"
+
+#~ msgid "Scottish Celebration"
+#~ msgstr "Celebración Escosesa"
+
+#~ msgid "What"
+#~ msgstr "Qué"
+
+#, fuzzy
+#~| msgid ""
+#~| "Celebrate our marriage at Murrayshall Country House Hotel... and Golf "
+#~| "Club"
+#~ msgid ""
+#~ "Join us for the serious bit followed by some Ceilidh dancing at Celebrate "
+#~ "our marriage at Murrayshall Country House Hotel... and Golf Club"
+#~ msgstr ""
+#~ "Acompañanos para la parte seria seguida por un ceilidh en el Murrayshall "
+#~ "Country House Hotel... y Club de Golf"
+
+#~ msgid "Ecuadorian Celebration"
+#~ msgstr "Celebración Ecuatoriana"
+
+#, fuzzy
+#~ msgid ""
+#~ "Join us for a latin american celebration in Maria's hometown, Guayaquil."
+#~ msgstr "Acompáñanos a celebrar nuestro matrimonio en Guayaquil."
