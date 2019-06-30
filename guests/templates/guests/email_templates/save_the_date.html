@@ -1,7 +1,7 @@
 {% extends 'guests/email_templates/email_base.html' %}
 {% load staticfiles %}
 {% block main_image %}
-    <a href="http://www.danielandmaria.com"
+    <a href="http://danielandmaria.com"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
         <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
@@ -21,6 +21,6 @@
     <p></p>
     Can't make it? Let us know at <a class="moz-txt-link-abbreviated" href="mailto:{{ rsvp_address }}">{{ rsvp_address }}</a>.
     {% if email_mode %}
-        <p><a href="https://www.danielandmaria.com">www.danielandmaria.com</a></p>
+        <p><a href="http://danielandmaria.com">http://danielandmaria.com</a></p>
     {% endif %}
 {% endblock %}
