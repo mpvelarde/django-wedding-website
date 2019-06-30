@@ -2,6 +2,7 @@
 .idea*
 *.pyc
 localsettings.py
+secret_settings.py
 *.sqlite3
 static_root
 _working/
