@@ -1,0 +1,26 @@
+#!/bin/sh
+NAME="wedding-website"
+DIR=[path to project]
+USER=[user]
+GROUP=[group]
+WORKERS=3
+BIND=unix:[path to socket]
+DJANGO_SETTINGS_MODULE=bigday.settings
+DJANGO_WSGI_MODULE=bigday.wsgi
+LOG_LEVEL=error
+LOG_FILE=[path to log file]
+
+cd $DIR
+. venv/bin/activate
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DIR:$PYTHONPATH
+
+exec venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $WORKERS \
+  --user=$USER \
+  --group=$GROUP \
+  --bind=$BIND \
+  --log-level=$LOG_LEVEL \
+  --log-file=$LOG_FILE

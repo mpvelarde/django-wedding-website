@@ -1,1 +1,3 @@
 gunicorn
+nginx
+supervisor
