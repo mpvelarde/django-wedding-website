@@ -14,10 +14,17 @@ from guests.models import Party
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
 SAVE_THE_DATE_CONTEXT_MAP = {
 
-        'savethedate': {
+        'scotland': {
             'title': 'savethedate',
             'header_filename': 'Logo.png',
             'main_image': 'save-the-date-purple.jpeg',
+            'main_color': '#f0f1f3',
+            'font_color': '#000000',
+        },
+        'ecuador': {
+            'title': 'savethedate',
+            'header_filename': 'Logo.png',
+            'main_image': 'save-the-date-pink-es.jpeg',
             'main_color': '#f0f1f3',
             'font_color': '#000000',
         }
