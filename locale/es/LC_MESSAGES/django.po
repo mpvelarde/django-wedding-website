@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 22:55+0100\n"
+"POT-Creation-Date: 2019-07-04 21:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: bigday/settings.py:132
+#: bigday/settings.py:130
 msgid "Spanish"
 msgstr "Español"
 
-#: bigday/settings.py:133
+#: bigday/settings.py:131
 msgid "English"
 msgstr "Inglés"
 
-#: bigday/templates/base.html:12 bigday/templates/home.html:19
+#: bigday/templates/base.html:12 bigday/templates/base.html:24
+#: bigday/templates/base.html:25 bigday/templates/home.html:19
 #: bigday/templates/home.html:46
 msgid "Daniel and Maria Paz"
 msgstr "Daniel y María Paz"
@@ -65,11 +66,11 @@ msgstr "11 de julio del 2020"
 
 #: bigday/templates/home.html:59
 msgid "Welcome!"
-msgstr "¡Bienvenido!"
+msgstr "¡Bienvenidos!"
 
 #: bigday/templates/home.html:62
 msgid "Hello friends and family!"
-msgstr "¡Hola amigos y familia!"
+msgstr "¡Hola familia y amigos!"
 
 #: bigday/templates/home.html:65
 msgid "Thanks for sharing our wedding celebrations with us!"
@@ -77,11 +78,11 @@ msgstr "¡Gracias por celebrar nuestra boda con nosotros!"
 
 #: bigday/templates/home.html:66
 msgid "As we wait for/figure out the big day, "
-msgstr "Mientras esperamos / planeamos el gran día, "
+msgstr "Mientras esperamos y planificamos el gran día, "
 
 #: bigday/templates/home.html:67
 msgid "we have created this website to keep you up-to-date with everything."
-msgstr "hemos creado este sitio web para mantenerlos al día."
+msgstr "hemos creado este sitio web para mantenerlos informados."
 
 #: bigday/templates/home.html:70
 msgid "Looking forward to celebrate with you!"
@@ -118,18 +119,16 @@ msgstr "Matrimonio Civil"
 #: bigday/templates/partials/event.html:9
 #: bigday/templates/partials/event.html:31
 msgid "When"
-msgstr "Cuándo"
+msgstr "¿Cuándo?"
 
 #: bigday/templates/partials/event.html:10
-#, fuzzy
-#| msgid "Saturday, May 1st, 2020, 2:00 pm"
 msgid "Friday, May 1st, 2020, 2:00 pm"
-msgstr "Sábado, 1ro de mayo, 2020, 2:00 pm"
+msgstr "Viernes 1 de mayo de 2020"
 
 #: bigday/templates/partials/event.html:11
 #: bigday/templates/partials/event.html:33
 msgid "Where"
-msgstr "Dónde"
+msgstr "¿Dónde?"
 
 #: bigday/templates/partials/event.html:13
 msgid "Murrayshall Country House Hotel"
@@ -141,7 +140,7 @@ msgstr "Matrimonio Eclesiástico"
 
 #: bigday/templates/partials/event.html:32
 msgid "Saturday, July 11 2020"
-msgstr "Sábado, 11 de julio del 2020"
+msgstr "Sábado 11 de julio de 2020"
 
 #: bigday/templates/partials/misc.html:7
 msgid "Paperless"
@@ -172,16 +171,16 @@ msgid ""
 "Traveling can be expensive and all we ask is for your company and well "
 "wishes."
 msgstr ""
-"Viajar puede ser muy caro y todo lo que pedimos de ustedes es su compañía y "
-"buenos deseos."
+"Viajar puede ser muy caro, todo lo que nos gustaría de ustedes, es su "
+"compañía y buenos deseos."
 
 #: bigday/templates/partials/misc.html:24
 msgid ""
 "If you do still wish to give a gift, we will have a registry up as we get "
 "closer to the date."
 msgstr ""
-"Si de todas formas quieren hacernos un regalo, vamos a publicar una lista "
-"cuando nos acerquemos a la fecha."
+"Si desean darnos un regalo, vamos a publicar una lista cuando nos "
+"acerquemos a la fecha."
 
 #: bigday/templates/partials/proposal.html:3
 msgid "Princess Street Gardens in the summer."
@@ -198,9 +197,8 @@ msgid ""
 "                Daniel proposed at Stonefield Castle, passing all the "
 "Tarbets, it was almost Valentine's Day... or maybe after."
 msgstr ""
-"Después de 2 años viviendo juntos hicimos un viaje a la costa oeste de "
-"Escocia. Daniel propuso matrimonio en el castillo de Stonefield, más o menos "
-"por San Valentín."
+"Después de dos años de vivir juntos hicimos un viaje a la costa oeste de "
+"Escocia. Daniel me propuso matrimonio en el Castillo de Stonefield."
 
 #: bigday/templates/partials/story.html:8
 msgid ""
@@ -211,8 +209,8 @@ msgid ""
 "              and he had a funny accent."
 msgstr ""
 "Nos conocimos en la Universidad de Edimburgo mientras hacíamos nuestra "
-"maestría en Computación.Nuestra primera cita fue en el Library Bar de la "
-"universidad."
+"maestría en Computación. Nuestra primera cita fue en el Library Bar de la "
+"Universidad."
 
 #: bigday/templates/partials/story.html:13
 msgid ""
@@ -230,9 +228,9 @@ msgid ""
 "the fireworks on Frederick’s Street,\n"
 "                next to the bus stop for the number 24 bus."
 msgstr ""
-"Pasamos 3 años nuevos en Escocia, pero solo un año fuimos al Street Party en "
-"Edimburgo. Fue nuestro primer año nuevo juntos y vimos los fuegos "
-"artificiales desde una parada de bus en Frederick Street."
+"Pasamos tres Años Nuevos en Escocia; pero solo un año fuimos al Street Party "
+"en Edimburgo, fue nuestro primer Año Nuevo juntos y vimos los fuegos "
+"artificiales desde la parada del bus en Frederick Street."
 
 #: bigday/templates/partials/story.html:22
 msgid ""
@@ -241,9 +239,9 @@ msgid ""
 "              They lived in Cochran Terrace for 2 years, almost in Edinburgh "
 "New Town."
 msgstr ""
-"Vivimos juntos por 2 años en Edimburgo, en un departamento en Cochran "
-"Terrace casi en New Town. Ahora vivimos en Londres, pasamos nuestro tiempo "
-"conociendo la ciudad y planeando nuestra boda."
+"Vivimos juntos por dos años en Edimburgo en un departamento en Cochran "
+"Terrace cerca del New Town. Ahora vivimos en Londres, hemos pasado el tiempo "
+"trabajando conociendo la ciudad y planificando nuestra boda."
 
 #: bigday/templates/partials/story.html:26
 msgid ""
