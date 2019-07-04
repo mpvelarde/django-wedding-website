@@ -7,9 +7,9 @@ from django.dispatch import receiver
 
 # these will determine the default formality of correspondence
 ALLOWED_TYPES = [
-    ('formal', 'formal'),
-    ('fun', 'fun'),
-    ('dimagi', 'dimagi'),
+    ('ecuador', 'ecuador'),
+    ('scotland', 'scotland'),
+    ('both', 'both'),
 ]
 
 
