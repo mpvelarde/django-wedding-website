@@ -29,8 +29,8 @@ class Party(models.Model):
     invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
-    is_invited = models.BooleanField(default=False)
-    rehearsal_dinner = models.BooleanField(default=False)
+    is_invited = models.BooleanField(default=True)
+    allow_plus_one = models.BooleanField(default=False)
     is_attending = models.NullBooleanField(default=None)
     comments = models.TextField(null=True, blank=True)
 
