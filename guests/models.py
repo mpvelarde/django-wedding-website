@@ -37,6 +37,9 @@ class Party(models.Model):
     def __unicode__(self):
         return 'Party: {}'.format(self.name)
 
+    def __str__(self):
+        return 'Party: {}'.format(self.name)
+
     @classmethod
     def in_default_order(cls):
         return cls.objects.order_by('category', '-is_invited', 'name')
@@ -55,10 +58,10 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('beef', 'cow'),
-    ('fish', 'fish'),
-    ('hen', 'hen'),
-    ('vegetarian', 'vegetable'),
+    ('any', 'any'),
+    ('dairy_free', 'dairy free'),
+    ('vegetarian', 'vegetarian'),
+    ('vegan', 'vegan'),
 ]
 
 
@@ -84,4 +87,7 @@ class Guest(models.Model):
         return str(self.pk)
 
     def __unicode__(self):
+        return 'Guest: {} {}'.format(self.first_name, self.last_name)
+
+    def __str__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
