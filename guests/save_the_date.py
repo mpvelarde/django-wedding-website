@@ -4,6 +4,7 @@ from email.mime.image import MIMEImage
 import os
 from datetime import datetime
 import random
+from django.utils.timezone import make_aware
 
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
@@ -37,7 +38,9 @@ def send_all_save_the_dates(test_only=False, mark_as_sent=False):
     for party in to_send_to:
         send_save_the_date_to_party(party, test_only=test_only)
         if mark_as_sent:
-            party.save_the_date_sent = datetime.now()
+            naive_datetime = datetime.now()
+            aware_datetime = make_aware(naive_datetime)
+            party.save_the_date_sent = aware_datetime
             party.save()
 
 def send_save_the_dates_by_type(test_only=False, mark_as_sent=False, ptype='scotland'):
@@ -45,7 +48,9 @@ def send_save_the_dates_by_type(test_only=False, mark_as_sent=False, ptype='scot
     for party in to_send_to:
         send_save_the_date_to_party(party, test_only=test_only)
         if mark_as_sent:
-            party.save_the_date_sent = datetime.now()
+            naive_datetime = datetime.now()
+            aware_datetime = make_aware(naive_datetime)
+            party.save_the_date_sent = aware_datetime
             party.save()
 
 def send_save_the_date_to_party(party, test_only=False):
