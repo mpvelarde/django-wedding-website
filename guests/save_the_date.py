@@ -9,6 +9,7 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from guests.models import Party
+from django.db.models import Q
 
 
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
@@ -39,6 +40,13 @@ def send_all_save_the_dates(test_only=False, mark_as_sent=False):
             party.save_the_date_sent = datetime.now()
             party.save()
 
+def send_save_the_dates_by_type(test_only=False, mark_as_sent=False, ptype='scotland'):
+    to_send_to = Party.in_default_order().filter(Q(type=ptype) | Q(type='both')).filter(is_invited=True, save_the_date_sent=None)
+    for party in to_send_to:
+        send_save_the_date_to_party(party, test_only=test_only)
+        if mark_as_sent:
+            party.save_the_date_sent = datetime.now()
+            party.save()
 
 def send_save_the_date_to_party(party, test_only=False):
     context = get_save_the_date_context(get_template_id_from_party(party))
