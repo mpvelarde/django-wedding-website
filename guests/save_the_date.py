@@ -43,6 +43,7 @@ def send_all_save_the_dates(test_only=False, mark_as_sent=False):
 def send_save_the_date_to_party(party, test_only=False):
     context = get_save_the_date_context(get_template_id_from_party(party))
     recipients = party.guest_emails
+    context['party_name'] = party.name
     if not recipients:
         print('===== WARNING: no valid email addresses found for {} =====').format(party)
     else:

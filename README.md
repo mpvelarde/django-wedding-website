@@ -123,3 +123,29 @@ I haven't built out more complete customization docs yet because I wasn't sure a
 but am happy to do that if people are!
 
 -Cory
+
+
+## Translations
+Create you locale files by running:
+```bash
+django-admin makemessages -l 'es'
+```
+
+Add translations to the .po file in the local folder in your project
+
+Compile the messages, this makes the a .mo file
+```bash
+python3 manage.py compilemessages
+```
+
+
+## Send Save The Dates
+Command to send all save the dates:
+```bash
+python manage.py send_save_the_dates
+```
+
+Actually send:
+```bash
+python manage.py send_save_the_dates --send --mark-sent'
+```

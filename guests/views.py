@@ -34,6 +34,8 @@ def dashboard(request):
     parties_with_pending_invites = Party.objects.filter(
         is_invited=True, is_attending=None
     ).order_by('category', 'name')
+    parties_with_sent_save_the_date = parties_with_pending_invites.exclude(save_the_date_sent=None)
+    parties_with_opened_save_the_date = parties_with_pending_invites.exclude(save_the_date_opened=None)
     parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
     attending_guests = Guest.objects.filter(is_attending=True)
@@ -53,6 +55,8 @@ def dashboard(request):
         'pending_invites': parties_with_pending_invites.count(),
         'pending_guests': Guest.objects.filter(party__is_invited=True, is_attending=None).count(),
         'guests_without_meals': guests_without_meals,
+        'sent_save_the_date_count': parties_with_sent_save_the_date.count(),
+        'opened_save_the_date_count': parties_with_opened_save_the_date.count(),
         'parties_with_unopen_invites': parties_with_unopen_invites,
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),

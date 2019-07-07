@@ -3,9 +3,22 @@
     <div class="container" id="main">
         <h1>Dashboard</h1>
         <table class="table table-striped">
+            <tbody>
             <tr>
                 <td>Guests Attending / Possible</td>
                 <td>{{ guests }} / {{ possible_guests }}</td>
+            </tr>
+            <tr>
+                <td>Sent Save The Date</td>
+                <td>{{ sent_save_the_date_count }} ({{ pending_guests }} guests)</td>
+            </tr>
+            <tr>
+                <td>Opened Save The Date</td>
+                <td>{{ opened_save_the_date_count }}<span class="text-muted"> / {{ sent_save_the_date_count }}</span></td>
+            </tr>
+            <tr>
+                <td>Unopened Invitations</td>
+                <td>{{ unopened_invite_count }}<span class="text-muted"> / {{ total_invites }}</span></td>
             </tr>
             <tr>
                 <td>Pending Invitations</td>
