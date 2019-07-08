@@ -33,18 +33,14 @@ SAVE_THE_DATE_CONTEXT_MAP = {
     }
 
 
-def send_all_save_the_dates(test_only=False, mark_as_sent=False):
-    to_send_to = Party.in_default_order().filter(is_invited=True, save_the_date_sent=None)
-    for party in to_send_to:
-        send_save_the_date_to_party(party, test_only=test_only)
-        if mark_as_sent:
-            naive_datetime = datetime.now()
-            aware_datetime = make_aware(naive_datetime)
-            party.save_the_date_sent = aware_datetime
-            party.save()
-
-def send_save_the_dates_by_type(test_only=False, mark_as_sent=False, ptype='scotland'):
-    to_send_to = Party.in_default_order().filter(Q(type=ptype) | Q(type='both')).filter(is_invited=True, save_the_date_sent=None)
+def send_all_save_the_dates(test_only=False, mark_as_sent=False, ptype=None):
+    pending_parties = Party.in_default_order().filter(is_invited=True, save_the_date_sent=None)
+    if ptype == None:
+        to_send_to = pending_parties
+    elif ptype == 'scotland':
+        to_send_to = pending_parties.filter(Q(type=ptype) | Q(type='both'))
+    else:
+        to_send_to = pending_parties.filter(type=ptype)
     for party in to_send_to:
         send_save_the_date_to_party(party, test_only=test_only)
         if mark_as_sent:
@@ -70,12 +66,9 @@ def send_save_the_date_to_party(party, test_only=False):
 def get_template_id_from_party(party):
     if party.type == 'ecuador':
         return 'ecuador'
-    elif party.type == 'scotland':
+    elif party.type == 'scotland' or party.type == 'both':
         # all non-formal dimagis get dimagi invites
         return 'scotland'
-    elif party.type == 'both':
-        all_options = list(SAVE_THE_DATE_CONTEXT_MAP.keys())
-        return random.choice(all_options)
     else:
         return None
 

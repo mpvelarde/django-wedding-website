@@ -29,7 +29,15 @@ class Command(BaseCommand):
             help="Reset sent flags"
         )
 
+        parser.add_argument(
+            '--type',
+            type=str,
+            dest='type',
+            default=None,
+            help="Send to only this type"
+        )
+
     def handle(self, *args, **options):
         if options['reset']:
             clear_all_save_the_dates()
-        send_all_save_the_dates(test_only=not options['send'], mark_as_sent=options['mark_sent'])
+        send_all_save_the_dates(test_only=not options['send'], mark_as_sent=options['mark_sent'], ptype=options['type'])
