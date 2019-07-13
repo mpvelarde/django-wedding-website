@@ -55,7 +55,7 @@ class Party(models.Model):
 
     @property
     def guest_emails(self):
-        return self.guest_set.values_list('email', flat=True)
+        return self.guest_set.exclude(email='').values_list('email', flat=True)
 
 
 MEALS = [
