@@ -11,6 +11,7 @@
         <tr>
             <td><a href="{% url 'admin:guests_party_change' party.pk %}" >{{ party.name }}</a></td>
             <td>{{ party.category }}</td>
+            <td>{{ party.type }}</td>
             <td>{{ party.guest_emails|join:"<br>" }}</td>
         </tr>
     {% endfor %}
