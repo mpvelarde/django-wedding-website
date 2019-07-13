@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Party</th>
+            <th>Type</th>
             <th>Category</th>
             <th>Sent to</th>
         </tr>
@@ -10,6 +11,7 @@
     {% for party in party_list %}
         <tr>
             <td><a href="{% url 'admin:guests_party_change' party.pk %}" >{{ party.name }}</a></td>
+            <td>{{ party.type }}</td>
             <td>{{ party.category }}</td>
             <td>{{ party.guest_emails|join:"<br>" }}</td>
         </tr>
