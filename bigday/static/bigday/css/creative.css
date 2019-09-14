@@ -188,7 +188,8 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
+    min-height: 100px;
+    height: auto;
     text-align: center;
     color: rgb(28,56,81);
     background-position: center;
