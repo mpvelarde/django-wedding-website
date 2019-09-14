@@ -25,15 +25,38 @@
     opacity: 1.0;
 }
 
-#invitation-details, #rsvp-form {
+.invitation-details, #rsvp-form {
     margin-top: 2em;
-    padding: 1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: .2em solid grey;
 }
 
+.invitation-details.form-horizontal{
+    padding: 1em;
+    border: .2em solid #fac176;
+}
+
+.invitation-details img{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: #6c5f90;
+    border-color: #554d69;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #614d8c !important;
+  background-position: 0 -15px;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #614d8c !important;
+  border-color: #514b61 !important;
+}
 
 body {
     background: url('../images/invite-background.jpg') no-repeat center center fixed;
