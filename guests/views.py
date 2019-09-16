@@ -88,6 +88,7 @@ def invitation(request, invite_id):
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
         'meals': MEALS,
+        'main_image': 'save-the-date-purple.jpeg',
     })
 
 
