@@ -25,12 +25,13 @@ def guess_party_by_invite_id_or_404(invite_id):
 def get_invitation_context(party):
     return {
         'title': "Lion's Head",
-        'main_image': 'bride-groom.png',
-        'main_color': '#fff3e8',
-        'font_color': '#666666',
-        'page_title': "Cory and Rowena - You're Invited!",
+        'main_image': 'save-the-date-purple.jpeg',
+        'main_color': '#ffffff',
+        'font_color': '#000000',
+        'page_title': "Maria Paz and Daniel - You're Invited!",
         'preheader_text': "You are invited!",
         'invitation_id': party.invitation_id,
+        'SITE_URL': settings.SITE_URL,
         'party': party,
         'meals': MEALS,
     }
