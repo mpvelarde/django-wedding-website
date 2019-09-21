@@ -32,8 +32,8 @@
     border-radius: 10px;
 }
 
-.invitation-details.form-horizontal{
-    padding: 1em;
+.invitation-details.with-border{
+    padding: 0 1em 1em 1em;
     border: .2em solid #fac176;
 }
 
@@ -75,6 +75,17 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
+@media (min-width: 768px){
+    .dl-horizontal dt {
+        width: 80px;
+    }
+    
+    .dl-horizontal dd {
+        margin-left: 90px;
+    }
+}
+
 
 #footer {
     padding-bottom: 30px;

@@ -16,8 +16,23 @@
             {% endwith %}
             </div>
         </section>
+        <section class="col-md-6 text-center">
+            <div class="invitation-details with-border">
+                <h2 class="text-center">Details</h2>
+                <div class="clearfix"></div>
+                <dl class="dl-horizontal lead">
+                        <dt>When</dt>
+                        <dd>Friday, May 1st, 2020, 2:00 pm</dd>
+                        <dt>Where</dt>
+                        <dd>
+                                Murrayshall Country House Hotel<br>
+                                Murrayshall Rd, Scone, Perth PH2 7PH, UK
+                        </dd>
+                    </dl>
+            </div>
+        </section>
         <section class="col-md-6">
-        <form data-toggle="validator" class="invitation-details form-horizontal" method="post">
+        <form data-toggle="validator" class="invitation-details with-border form-horizontal" method="post">
             <h2 id="rsvp-header" class="text-center">RSVP</h2>
             <div class="clearfix"></div>
             {% csrf_token %}
