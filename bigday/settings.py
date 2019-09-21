@@ -158,6 +158,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 WEDDING_CC_LIST = []  # put email addresses here if you want to cc someone on all your invitations
 
+SITE_URL = 'https://danielandmaria.com'
 
 # The email backend to use. For possible shortcuts see django.core.mail.
 # The default is to use the SMTP backend.
