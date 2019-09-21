@@ -28,7 +28,7 @@
 </table>
 {% endblock %}
 {% block main_image %}
-    <a href="http://danielandmaria.com"
+    <a href="{{ SITE_URL }}"
        {% if email_mode %}target="_blank"{% endif %}>
     {% with "save-the-date/images/"|add:main_image as main_static_url %}
         <img src="{% if email_mode %}cid:{{ main_image }}{% else %}{% static main_static_url %}{% endif %}"
@@ -45,9 +45,9 @@
     <p>
     </p>
     {% if name == 'scotland' %}
-    Please visit <a href="http://danielandmaria.com">http://danielandmaria.com</a> for more info.
+    Please visit <a href="{{ SITE_URL }}">{{ SITE_URL }}</a> for more info.
     {% else %}
-    Para más información visita <a href="http://danielandmaria.com">http://danielandmaria.com</a>.
+    Para más información visita <a href="{{ SITE_URL }}">{{ SITE_URL }}</a>.
     {% endif %}
     <p></p>
     {% if name == 'scotland' %}
@@ -56,6 +56,6 @@
     ¿No puedes asistir? Escríbenos al <a class="moz-txt-link-abbreviated" href="mailto:{{ rsvp_address }}">{{ rsvp_address }}</a>.
     {% endif %}
     {% if email_mode %}
-        <p><a href="http://danielandmaria.com">http://danielandmaria.com</a></p>
+        <p><a href="{{ SITE_URL }}">{{ SITE_URL }}</a></p>
     {% endif %}
 {% endblock %}

@@ -22,6 +22,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
             'main_image': 'save-the-date-purple.jpeg',
             'main_color': '#ffffff',
             'font_color': '#000000',
+            'SITE_URL': settings.SITE_URL,
         },
         'ecuador': {
             'title': 'savethedate',
@@ -29,6 +30,7 @@ SAVE_THE_DATE_CONTEXT_MAP = {
             'main_image': 'save-the-date-pink-es.jpeg',
             'main_color': '#ffffff',
             'font_color': '#000000',
+            'SITE_URL': settings.SITE_URL,
         }
     }
 
