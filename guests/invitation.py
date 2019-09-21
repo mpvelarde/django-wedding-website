@@ -31,6 +31,7 @@ def get_invitation_context(party):
         'page_title': "Maria Paz and Daniel - You're Invited!",
         'preheader_text': "You are invited!",
         'invitation_id': party.invitation_id,
+        'party_name': party.name,
         'SITE_URL': settings.SITE_URL,
         'party': party,
         'meals': MEALS,
