@@ -92,3 +92,60 @@ class Guest(models.Model):
 
     def __str__(self):
         return 'Guest: {} {}'.format(self.first_name, self.last_name)
+
+
+class Event(models.Model):
+    """
+    There are two events
+    """
+
+    name = models.TextField()
+    date = models.DateTimeField(null=True, blank=True, default=None)
+
+    def __unicode__(self):
+        return 'Event: {} {}'.format(self.name, self.date)
+
+    def __str__(self):
+        return 'Event: {} {}'.format(self.name, self.date)
+
+class Invitation(models.Model):
+    """
+    An invitation per party per event
+    """
+
+    party = models.ForeignKey(Party, on_delete=models.PROTECT)
+    event = models.ForeignKey(Event, on_delete=models.PROTECT)
+    save_the_date_sent = models.DateTimeField(null=True, blank=True, default=None)
+    save_the_date_opened = models.DateTimeField(null=True, blank=True, default=None)
+    invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
+    invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
+    invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
+
+    @property
+    def name(self):
+        return u'{} {}'.format(self.party.name, self.event.name)
+
+    def __unicode__(self):
+        return 'Invitation: {} {}'.format(self.party.name, self.event.name)
+
+    def __str__(self):
+        return 'Invitation: {} {}'.format(self.party.name, self.event.name)
+
+
+class RSVP(models.Model):
+    """
+    The reply for each event for each guest
+    """
+
+    guest = models.ForeignKey(Guest, on_delete=models.PROTECT)
+    invitation = models.ForeignKey(Invitation, on_delete=models.PROTECT)
+    event = models.ForeignKey(Event, on_delete=models.PROTECT, default=None)
+    date_of_reply  = models.DateTimeField(null=True, blank=True, default=None)
+    is_attending = models.NullBooleanField(default=None)
+    meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
+
+    def __unicode__(self):
+        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name, self.event.name)
+
+    def __str__(self):
+        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name, self.event.name)
