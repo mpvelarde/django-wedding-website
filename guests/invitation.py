@@ -42,7 +42,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     if recipients is None:
         recipients = party.guest_emails
     if not recipients:
-        print('===== WARNING: no valid email addresses found for {} =====').format(party)
+        print(('===== WARNING: no valid email addresses found for {} =====').format(party))
         return
 
     context = get_invitation_context(party)
@@ -59,7 +59,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     msg.attach_alternative(template_html, "text/html")
     msg.mixed_subtype = 'related'
     for filename in (context['main_image'], ):
-        attachment_path = os.path.join(os.path.dirname(__file__), 'static', 'invitation', 'images', filename)
+        attachment_path = os.path.join(os.path.dirname(__file__), 'static', 'save-the-date', 'images', filename)
         with open(attachment_path, "rb") as image_file:
             msg_img = MIMEImage(image_file.read())
             msg_img.add_header('Content-ID', '<{}>'.format(filename))

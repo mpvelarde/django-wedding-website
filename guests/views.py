@@ -65,6 +65,10 @@ def dashboard(request):
         'category_breakdown': category_breakdown,
     })
 
+def vhandler404(request, exception=None):
+    return render(request, 'errors/404.html', status=404)
+def vhandler500(request, exception=None):
+    return render(request, 'errors/500.html', status=500)
 
 def invitation(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
