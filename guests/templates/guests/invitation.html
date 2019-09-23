@@ -35,6 +35,7 @@
         <section class="col-md-6">
         <form data-toggle="validator" class="invitation-details with-border form-horizontal" method="post">
             <h2 id="rsvp-header" class="text-center">{% trans "RSVP" %}</h2>
+            <p>{% trans "Please RSVP by February 2020" %}</p>
             <div class="clearfix"></div>
             {% csrf_token %}
             {% for guest in party.ordered_guests.all %}
@@ -63,7 +64,7 @@
             {% endif %}
             {% endfor %}
             <div class="form-group col-sm-12">
-                <input type="text" name="comments" class="form-control" placeholder="Questions/comments/well wishes" >
+                <input type="text" name="comments" class="form-control" placeholder='{% trans "Questions/comments/well wishes" %}' >
             </div>
             <div class="form-group">
                 <div class="text-center">

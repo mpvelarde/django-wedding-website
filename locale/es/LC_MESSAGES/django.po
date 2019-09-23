@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-04 21:40+0100\n"
+"POT-Creation-Date: 2019-09-23 21:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,19 +118,23 @@ msgstr "Matrimonio Civil"
 
 #: bigday/templates/partials/event.html:9
 #: bigday/templates/partials/event.html:31
+#: guests/templates/guests/invitation.html:25
 msgid "When"
 msgstr "¿Cuándo?"
 
 #: bigday/templates/partials/event.html:10
+#: guests/templates/guests/invitation.html:26
 msgid "Friday, May 1st, 2020, 2:00 pm"
-msgstr "Viernes 1 de mayo de 2020"
+msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
 
 #: bigday/templates/partials/event.html:11
 #: bigday/templates/partials/event.html:33
+#: guests/templates/guests/invitation.html:27
 msgid "Where"
 msgstr "¿Dónde?"
 
 #: bigday/templates/partials/event.html:13
+#: guests/templates/guests/invitation.html:29
 msgid "Murrayshall Country House Hotel"
 msgstr ""
 
@@ -179,8 +183,8 @@ msgid ""
 "If you do still wish to give a gift, we will have a registry up as we get "
 "closer to the date."
 msgstr ""
-"Si desean darnos un regalo, vamos a publicar una lista cuando nos "
-"acerquemos a la fecha."
+"Si desean darnos un regalo, vamos a publicar una lista cuando nos acerquemos "
+"a la fecha."
 
 #: bigday/templates/partials/proposal.html:3
 msgid "Princess Street Gardens in the summer."
@@ -248,6 +252,42 @@ msgid ""
 "Now they are in London, busy exploring this new massive city and wedding "
 "planning!"
 msgstr " "
+
+#: guests/templates/guests/invitation.html:22
+msgid "Details"
+msgstr "Detalles"
+
+#: guests/templates/guests/invitation.html:30
+msgid "Murrayshall Rd, Scone, Perth PH2 7PH, UK"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:37
+msgid "RSVP"
+msgstr ""
+
+#: guests/templates/guests/invitation.html:38
+msgid "Please RSVP by February 2020"
+msgstr "Por favor confirmar asistencia antes de Febrero del 2020"
+
+#: guests/templates/guests/invitation.html:46
+msgid "will attend"
+msgstr "asistirá"
+
+#: guests/templates/guests/invitation.html:49
+msgid "will not attend"
+msgstr "lamenta no ir"
+
+#: guests/templates/guests/invitation.html:56
+msgid "and will eat"
+msgstr "va a comer"
+
+#: guests/templates/guests/invitation.html:67
+msgid "Questions/comments/well wishes"
+msgstr "Preguntas/comentarios/buenos deseos"
+
+#: guests/templates/guests/invitation.html:71
+msgid "Submit Response"
+msgstr "Enviar respuesta"
 
 #: myvenv/lib/python3.6/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"

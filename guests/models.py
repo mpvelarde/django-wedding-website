@@ -59,8 +59,8 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('any', 'any'),
-    ('dairy_free', 'dairy free'),
+    ('any', 'any/cualquiera'),
+    ('dairy_free', 'dairy free/sin lactosa'),
     ('vegetarian', 'vegetarian'),
     ('vegan', 'vegan'),
 ]
