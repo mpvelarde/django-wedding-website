@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% block page_head %}
     <link href="{% static 'bigday/css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
@@ -18,22 +19,22 @@
         </section>
         <section class="col-md-6 text-center">
             <div class="invitation-details with-border">
-                <h2 class="text-center">Details</h2>
+                <h2 class="text-center">{% trans "Details" %}</h2>
                 <div class="clearfix"></div>
                 <dl class="dl-horizontal lead">
-                        <dt>When</dt>
-                        <dd>Friday, May 1st, 2020, 2:00 pm</dd>
-                        <dt>Where</dt>
+                        <dt>{% trans "When" %}</dt>
+                        <dd>{% trans "Friday, May 1st, 2020, 2:00 pm" %}</dd>
+                        <dt>{% trans "Where" %}</dt>
                         <dd>
-                                Murrayshall Country House Hotel<br>
-                                Murrayshall Rd, Scone, Perth PH2 7PH, UK
+                                {% trans "Murrayshall Country House Hotel" %}<br>
+                                {% trans "Murrayshall Rd, Scone, Perth PH2 7PH, UK" %}
                         </dd>
                     </dl>
             </div>
         </section>
         <section class="col-md-6">
         <form data-toggle="validator" class="invitation-details with-border form-horizontal" method="post">
-            <h2 id="rsvp-header" class="text-center">RSVP</h2>
+            <h2 id="rsvp-header" class="text-center">{% trans "RSVP" %}</h2>
             <div class="clearfix"></div>
             {% csrf_token %}
             {% for guest in party.ordered_guests.all %}
@@ -41,17 +42,17 @@
                 {% with 'attending-'|add:guest.unique_id as attending_label %}
                 <label for="{{ attending_label }}" class="col-sm-3 control-label">{{ guest.name }}</label>
                 <label class="radio-inline">
-                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required> will attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required> {% trans "will attend" %}
                 </label>
                 <label class="radio-inline">
-                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> will not attend
+                    <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> {% trans "will not attend" %}
                 </label>
                 {% endwith %}
             </div>
             {% if not guest.is_child %}
             <div class="form-group">
                 {% with 'meal-'|add:guest.unique_id as meal_label %}
-                <label for="{{ meal_label }}" class="col-sm-3 control-label">... and will eat</label>
+                <label for="{{ meal_label }}" class="col-sm-3 control-label">... {% trans "and will eat" %}</label>
                 {% for meal_id, meal_name in meals %}
                 <label class="radio-inline">
                     <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %} required> {{ meal_name }}
@@ -66,7 +67,7 @@
             </div>
             <div class="form-group">
                 <div class="text-center">
-                    <input type="submit" class="btn btn-primary" value="Submit Response" />
+                    <input type="submit" class="btn btn-primary" value='{% trans "Submit Response" %}' />
                 </div>
             </div>
         </form>
