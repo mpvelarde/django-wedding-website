@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-23 21:54+0000\n"
+"POT-Creation-Date: 2019-09-24 20:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -288,6 +288,38 @@ msgstr "Preguntas/comentarios/buenos deseos"
 #: guests/templates/guests/invitation.html:71
 msgid "Submit Response"
 msgstr "Enviar respuesta"
+
+#: guests/templates/guests/rsvp_confirmation.html:9
+msgid "Hi"
+msgstr "Hola"
+
+#: guests/templates/guests/rsvp_confirmation.html:9
+msgid "Thanks for your response!"
+msgstr "¡Gracias por su respuesta!"
+
+#: guests/templates/guests/rsvp_confirmation.html:12
+#, fuzzy
+#| msgid "Looking forward to celebrate with you!"
+msgid "We can't wait to celebrate with you!"
+msgstr "¡Esperamos celebrar contigo!"
+
+#: guests/templates/guests/rsvp_confirmation.html:15
+#, fuzzy
+#| msgid "If you have any questions don't hesitate to reach out!"
+msgid "If you have any other questions, don't hesitate to email us at"
+msgstr "¡Si tienes alguna pregunta no dudes en contactarnos!"
+
+#: guests/templates/guests/rsvp_confirmation.html:19
+msgid "We're sorry you won't be able to join us."
+msgstr "Lamentamos que no nos podrán acompañar."
+
+#: guests/templates/guests/rsvp_confirmation.html:22
+msgid "We look forward to catching up with you some other time!"
+msgstr "¡Esperamos verlos pronto en otra ocasión!"
+
+#: guests/templates/guests/rsvp_confirmation.html:26
+msgid "Maria Paz and Daniel"
+msgstr "María Paz y Daniel"
 
 #: myvenv/lib/python3.6/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
