@@ -103,10 +103,10 @@ class Event(models.Model):
     date = models.DateTimeField(null=True, blank=True, default=None)
 
     def __unicode__(self):
-        return 'Event: {} {}'.format(self.name, self.date)
+        return 'Event: {}'.format(self.name)
 
     def __str__(self):
-        return 'Event: {} {}'.format(self.name, self.date)
+        return 'Event: {}'.format(self.name)
 
 class Invitation(models.Model):
     """
