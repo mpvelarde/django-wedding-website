@@ -6,7 +6,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.urls import reverse
 from django.http import Http404
 from django.template.loader import render_to_string
-from guests.models import Party, MEALS
+from guests.models import Party, Invitation, Event, MEALS
+from django.db.models import Q
 
 INVITATION_TEMPLATE = 'guests/email_templates/invitation.html'
 
@@ -77,3 +78,12 @@ def send_all_invitations(test_only, mark_as_sent):
         if mark_as_sent:
             party.invitation_sent = datetime.now()
             party.save()
+
+def generate_invitations_for_event(test_only, party_type):
+    parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True, invitation_sent=None)
+    event_for_party_type = Event.objects.get(type=party_type)
+    for party in parties_by_type:
+        print('generate invitation for party {} ({})'.format(party.name, party_type))
+        invitation = Invitation(party=party, event=event_for_party_type)
+        if not test_only:
+            invitation.save()
