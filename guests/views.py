@@ -72,10 +72,11 @@ def vhandler500(request, exception=None):
 
 def invitation(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
-    if party.invitation_opened is None:
+    invitation = get_invite_by_id_or_404(invite_id)
+    if invitation.invitation_opened is None:
         # update if this is the first time the invitation was opened
-        party.invitation_opened = datetime.utcnow()
-        party.save()
+        invitation.invitation_opened = datetime.utcnow()
+        invitation.save()
     if request.method == 'POST':
         for response in _parse_invite_params(request.POST):
             guest = Guest.objects.get(pk=response.guest_pk)

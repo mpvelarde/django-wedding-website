@@ -17,6 +17,12 @@ def guess_party_by_invite_id_or_404(invite_id):
     except Invitation.DoesNotExist:
         raise Http404()
 
+def get_invite_by_id_or_404(invite_id):
+    try:
+        return Invitation.objects.get(invitation_id=invite_id)
+    except Invitation.DoesNotExist:
+        raise Http404()
+
 
 def get_invitation_context(party):
     return {
