@@ -86,6 +86,19 @@ body {
     }
 }
 
+.radio-inline{
+    font-size: 13px;
+}
+
+.lead {
+    font-size: 16px;
+}
+
+.invitation-details p{
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
 
 #footer {
     padding-bottom: 30px;

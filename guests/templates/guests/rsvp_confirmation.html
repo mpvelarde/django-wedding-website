@@ -6,24 +6,24 @@
 {% block page_content %}
     <div class="layer"></div>
     <div class="container" id="main">
-        <h2>Hi {{ party.name }}! Thanks for your response!</h2>
+        <h2>{% trans "Hi" %} {{ party.name }}! {% trans "Thanks for your response!" %}</h2>
         {% if party.any_guests_attending %}
             <p>
-                We can't wait to celebrate with you!
+                {% trans "We can't wait to celebrate with you!" %}
             </p>
             <p>
-                If you have any other questions, don't hesitate to email us at <a href="mailto:{{ support_email }}">{{ support_email }}</a>.
+                {% trans "If you have any other questions, don't hesitate to email us at" %} <a href="mailto:{{ support_email }}">{{ support_email }}</a>.
             </p>
         {% else %}
             <p>
-                We're sorry you won't be able to join us.
+                {% trans "We're sorry you won't be able to join us." %}
             </p>
             <p>
-                We look forward to catching up with you some other time!
+                {% trans "We look forward to catching up with you some other time!" %}
             </p>
         {% endif %}
         <p>
-            - Maria Paz and Daniel
+            - {% trans "Maria Paz and Daniel" %}
         </p>
     </div>
 {% endblock %}

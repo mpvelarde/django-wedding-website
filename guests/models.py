@@ -59,8 +59,8 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('any', 'any'),
-    ('dairy_free', 'dairy free'),
+    ('any', 'any/cualquiera'),
+    ('dairy_free', 'dairy free/sin lactosa'),
     ('vegetarian', 'vegetarian'),
     ('vegan', 'vegan'),
 ]
@@ -104,10 +104,10 @@ class Event(models.Model):
     type = models.CharField(max_length=10, choices=ALLOWED_TYPES, default='scotland')
 
     def __unicode__(self):
-        return 'Event: {} {}'.format(self.name, self.date)
+        return 'Event: {}'.format(self.name)
 
     def __str__(self):
-        return 'Event: {} {}'.format(self.name, self.date)
+        return 'Event: {}'.format(self.name)
 
 class Invitation(models.Model):
     """
