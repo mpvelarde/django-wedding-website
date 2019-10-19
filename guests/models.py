@@ -128,10 +128,10 @@ class Invitation(models.Model):
         return any(self.rsvp_set.values_list('is_attending', flat=True))
 
     def __unicode__(self):
-        return 'Invitation: {} {}'.format(self.party.name, self.event.name)
+        return 'Invitation: {} {} {}'.format(self.party.name, self.event.name, self.invitation_id)
 
     def __str__(self):
-        return 'Invitation: {} {}'.format(self.party.name, self.event.name, self.invitation_id)
+        return 'Invitation: {} {} {}'.format(self.party.name, self.event.name, self.invitation_id)
 
 
 class RSVP(models.Model):

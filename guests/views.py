@@ -12,7 +12,7 @@ from django.views.generic import ListView
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email, get_invite_by_id_or_404, get_or_make_rsvp
-from guests.models import Guest, MEALS, Party, RSVP
+from guests.models import Guest, MEALS, Party, RSVP, Invitation
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
 
@@ -31,32 +31,36 @@ def export_guests(request):
 
 @login_required
 def dashboard(request):
-    parties_with_pending_invites = Party.objects.filter(
-        is_invited=True, is_attending=None
-    ).order_by('category', 'name')
-    parties_with_sent_save_the_date = parties_with_pending_invites.exclude(save_the_date_sent=None)
-    parties_with_opened_save_the_date = parties_with_pending_invites.exclude(save_the_date_opened=None)
-    parties_with_unopen_invites = parties_with_pending_invites.filter(invitation_opened=None)
-    parties_with_open_unresponded_invites = parties_with_pending_invites.exclude(invitation_opened=None)
-    attending_guests = Guest.objects.filter(is_attending=True)
-    guests_without_meals = attending_guests.filter(
-        is_child=False
+    pending_invites = Invitation.objects.filter(
+        party__is_invited=True, is_attending=None
+    ).order_by(
+        'party__category', 'party__name'
+    )
+    parties_with_sent_save_the_date = pending_invites.exclude(party__save_the_date_sent=None)
+    parties_with_unopen_invites = pending_invites.filter(invitation_opened=None)
+    parties_with_open_unresponded_invites = pending_invites.exclude(invitation_opened=None)
+    attending_rsvp = RSVP.objects.filter(is_attending=True)
+    guests_without_meals = attending_rsvp.filter(
+        guest__is_child=False
     ).filter(
         Q(meal__isnull=True) | Q(meal='')
     ).order_by(
-        'party__category', 'first_name'
+        'invitation__party__category', 'first_name'
     )
-    meal_breakdown = attending_guests.exclude(meal=None).values('meal').annotate(count=Count('*'))
-    category_breakdown = attending_guests.values('party__category').annotate(count=Count('*'))
+    meal_breakdown = attending_rsvp.exclude(meal=None).values('meal').annotate(count=Count('*'))
+    category_breakdown = attending_rsvp.values('invitation__party__category').annotate(count=Count('*'))
+
+    count_rsvp_guests_yes = RSVP.objects.filter(is_attending=True).count()
+    count_rsvp_guests_no = RSVP.objects.filter(is_attending=False).count()
+    count_invited_guests = Guest.objects.filter(party__is_invited=True).count()
     return render(request, 'guests/dashboard.html', context={
-        'guests': Guest.objects.filter(is_attending=True).count(),
-        'possible_guests': Guest.objects.filter(party__is_invited=True).exclude(is_attending=False).count(),
-        'not_coming_guests': Guest.objects.filter(is_attending=False).count(),
-        'pending_invites': parties_with_pending_invites.count(),
-        'pending_guests': Guest.objects.filter(party__is_invited=True, is_attending=None).count(),
+        'guests': count_rsvp_guests_yes,
+        'possible_guests':  count_invited_guests - count_rsvp_guests_yes,
+        'not_coming_guests': count_rsvp_guests_no,
+        'pending_invites': pending_invites.count(),
+        'pending_guests': count_invited_guests - count_rsvp_guests_yes - count_rsvp_guests_no,
         'guests_without_meals': guests_without_meals,
         'sent_save_the_date_count': parties_with_sent_save_the_date.count(),
-        'opened_save_the_date_count': parties_with_opened_save_the_date.count(),
         'parties_with_unopen_invites': parties_with_unopen_invites,
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),
