@@ -13,12 +13,12 @@ class Command(BaseCommand):
             help="Actually save invitation"
         )
         parser.add_argument(
-            '--type',
+            '--event-type',
             type=str,
-            dest='type',
-            default=None,
-            help="Generate to only this type"
+            dest='event-type',
+            default='both',
+            help="Generate invitations to only this event"
         )
 
     def handle(self, *args, **options):
-        generate_invitations_for_event(test_only=not options['save'], party_type=options['type'])
+        generate_invitations_for_event(test_only=not options['save'], party_type=options['event-type'])
