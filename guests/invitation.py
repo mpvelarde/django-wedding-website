@@ -35,6 +35,12 @@ def get_invite_by_id_or_404(invite_id):
     except Invitation.DoesNotExist:
         raise Http404()
 
+def get_event_by_id_or_404(event_id):
+    try:
+        return Event.objects.get(pk=event_id)
+    except Event.DoesNotExist:
+        raise Http404()
+
 
 def get_invitation_context(party, invitation_id):
     return {

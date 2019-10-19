@@ -1,20 +1,12 @@
 {% extends 'base.html' %}
 {% block page_content %}
     <div class="container" id="main">
-        <h1>Dashboard</h1>
+        <h1>Dashboard for {{ event.name }}</h1>
         <table class="table table-striped">
             <tbody>
             <tr>
                 <td>Guests Attending / Possible</td>
                 <td>{{ guests }} / {{ possible_guests }}</td>
-            </tr>
-            <tr>
-                <td>Sent Save The Date</td>
-                <td>{{ sent_save_the_date_count }} ({{ pending_guests }} guests)</td>
-            </tr>
-            <tr>
-                <td>Opened Save The Date</td>
-                <td>{{ opened_save_the_date_count }}<span class="text-muted"> / {{ sent_save_the_date_count }}</span></td>
             </tr>
             <tr>
                 <td>Unopened Invitations</td>
@@ -34,46 +26,6 @@
             </tr>
             </tbody>
         </table>
-        <div class="row">
-            <div class="col-lg-6">
-                <h1>Guests by category</h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            {% for category in category_breakdown %}
-                            <th>{{ category.party__category }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {% for category in category_breakdown %}
-                            <td>{{ category.count }}</td>
-                            {% endfor %}
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-6">
-                <h1>Meal choices</h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            {% for meal in meal_breakdown %}
-                            <th>{{ meal.meal }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {% for meal in meal_breakdown %}
-                            <td>{{ meal.count }}</td>
-                            {% endfor %}
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-6">
                 <h1>Unopened Invitations</h1>
