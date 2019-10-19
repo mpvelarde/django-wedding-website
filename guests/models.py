@@ -140,7 +140,6 @@ class RSVP(models.Model):
 
     guest = models.ForeignKey(Guest, on_delete=models.PROTECT)
     invitation = models.ForeignKey(Invitation, on_delete=models.PROTECT)
-    event = models.ForeignKey(Event, on_delete=models.PROTECT, default=None)
     date_of_reply  = models.DateTimeField(null=True, blank=True, default=None)
     is_attending = models.NullBooleanField(default=None)
     meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
