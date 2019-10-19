@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-24 20:09+0000\n"
+"POT-Creation-Date: 2019-10-19 16:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,7 +92,7 @@ msgstr "¡Esperamos celebrar contigo!"
 msgid "- Daniel and Maria Paz"
 msgstr "- Daniel y María Paz."
 
-#: bigday/templates/home.html:86 bigday/templates/partials/event.html:35
+#: bigday/templates/home.html:86
 msgid "Guayaquil"
 msgstr "Guayaquil"
 
@@ -113,38 +113,63 @@ msgid "If you have any questions don't hesitate to reach out!"
 msgstr "¡Si tienes alguna pregunta no dudes en contactarnos!"
 
 #: bigday/templates/partials/event.html:6
-msgid "Civil Wedding"
-msgstr "Matrimonio Civil"
+msgid "Wedding"
+msgstr "Boda"
 
 #: bigday/templates/partials/event.html:9
-#: bigday/templates/partials/event.html:31
+#: bigday/templates/partials/event.html:33
+msgid "What"
+msgstr "¿Qué?"
+
+#: bigday/templates/partials/event.html:10
+msgid ""
+"Join us to celebrate our marriage at Murrayshall House Hotel... expect some "
+"ceilidh dancing."
+msgstr ""
+"Acompáñanos a celebrar nuestro matrimonio en el Hotel Murrayshall... "
+"prepárense para bailar ceilidh"
+
+#: bigday/templates/partials/event.html:11
+#: bigday/templates/partials/event.html:35
 #: guests/templates/guests/invitation.html:25
 msgid "When"
 msgstr "¿Cuándo?"
 
-#: bigday/templates/partials/event.html:10
+#: bigday/templates/partials/event.html:12
 #: guests/templates/guests/invitation.html:26
 msgid "Friday, May 1st, 2020, 2:00 pm"
 msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
 
-#: bigday/templates/partials/event.html:11
-#: bigday/templates/partials/event.html:33
+#: bigday/templates/partials/event.html:13
+#: bigday/templates/partials/event.html:37
 #: guests/templates/guests/invitation.html:27
 msgid "Where"
 msgstr "¿Dónde?"
 
-#: bigday/templates/partials/event.html:13
+#: bigday/templates/partials/event.html:15
 #: guests/templates/guests/invitation.html:29
 msgid "Murrayshall Country House Hotel"
 msgstr ""
 
-#: bigday/templates/partials/event.html:28
-msgid "Church Wedding"
-msgstr "Matrimonio Eclesiástico"
+#: bigday/templates/partials/event.html:30
+msgid "Party"
+msgstr "Fiesta"
 
-#: bigday/templates/partials/event.html:32
+#: bigday/templates/partials/event.html:34
+msgid ""
+"Ecuadorian food, drinks and hopefully a party bus, due to life and things we "
+"still have to define this."
+msgstr ""
+"Comida ecuatoriana, trago y ojalá una chiva, pronto tendremos más detalles "
+"de este evento."
+
+#: bigday/templates/partials/event.html:36
 msgid "Saturday, July 11 2020"
 msgstr "Sábado 11 de julio de 2020"
+
+#: bigday/templates/partials/event.html:39
+msgid "Somewhere in Guayaquil"
+msgstr "Algún lugar en Guayaquil"
 
 #: bigday/templates/partials/misc.html:7
 msgid "Paperless"
@@ -261,63 +286,71 @@ msgstr "Detalles"
 msgid "Murrayshall Rd, Scone, Perth PH2 7PH, UK"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:37
+#: guests/templates/guests/invitation.html:33
+msgid "Please visit"
+msgstr "Para más información visita "
+
+#: guests/templates/guests/invitation.html:33
+msgid "for more info."
+msgstr " "
+
+#: guests/templates/guests/invitation.html:40
 msgid "RSVP"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:38
+#: guests/templates/guests/invitation.html:42
 msgid "Please RSVP by February 2020"
 msgstr "Por favor confirmar asistencia antes de Febrero del 2020"
 
-#: guests/templates/guests/invitation.html:46
+#: guests/templates/guests/invitation.html:51
 msgid "will attend"
 msgstr "asistirá"
 
-#: guests/templates/guests/invitation.html:49
+#: guests/templates/guests/invitation.html:54
 msgid "will not attend"
 msgstr "lamenta no ir"
 
-#: guests/templates/guests/invitation.html:56
+#: guests/templates/guests/invitation.html:61
 msgid "and will eat"
 msgstr "va a comer"
 
-#: guests/templates/guests/invitation.html:67
+#: guests/templates/guests/invitation.html:72
 msgid "Questions/comments/well wishes"
 msgstr "Preguntas/comentarios/buenos deseos"
 
-#: guests/templates/guests/invitation.html:71
+#: guests/templates/guests/invitation.html:76
 msgid "Submit Response"
 msgstr "Enviar respuesta"
 
-#: guests/templates/guests/rsvp_confirmation.html:9
+#: guests/templates/guests/rsvp_confirmation.html:10
 msgid "Hi"
 msgstr "Hola"
 
-#: guests/templates/guests/rsvp_confirmation.html:9
+#: guests/templates/guests/rsvp_confirmation.html:10
 msgid "Thanks for your response!"
 msgstr "¡Gracias por su respuesta!"
 
-#: guests/templates/guests/rsvp_confirmation.html:12
+#: guests/templates/guests/rsvp_confirmation.html:13
 #, fuzzy
 #| msgid "Looking forward to celebrate with you!"
 msgid "We can't wait to celebrate with you!"
 msgstr "¡Esperamos celebrar contigo!"
 
-#: guests/templates/guests/rsvp_confirmation.html:15
+#: guests/templates/guests/rsvp_confirmation.html:16
 #, fuzzy
 #| msgid "If you have any questions don't hesitate to reach out!"
 msgid "If you have any other questions, don't hesitate to email us at"
 msgstr "¡Si tienes alguna pregunta no dudes en contactarnos!"
 
-#: guests/templates/guests/rsvp_confirmation.html:19
+#: guests/templates/guests/rsvp_confirmation.html:20
 msgid "We're sorry you won't be able to join us."
 msgstr "Lamentamos que no nos podrán acompañar."
 
-#: guests/templates/guests/rsvp_confirmation.html:22
+#: guests/templates/guests/rsvp_confirmation.html:23
 msgid "We look forward to catching up with you some other time!"
 msgstr "¡Esperamos verlos pronto en otra ocasión!"
 
-#: guests/templates/guests/rsvp_confirmation.html:26
+#: guests/templates/guests/rsvp_confirmation.html:27
 msgid "Maria Paz and Daniel"
 msgstr "María Paz y Daniel"
 
@@ -1682,12 +1715,6 @@ msgstr "Comunidad Django"
 #: myvenv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:408
 msgid "Connect, get help, or contribute"
 msgstr "Conéctate, consigue ayuda, o contribuye"
-
-#~ msgid "Scottish Celebration"
-#~ msgstr "Celebración Escosesa"
-
-#~ msgid "What"
-#~ msgstr "Qué"
 
 #, fuzzy
 #~| msgid ""
