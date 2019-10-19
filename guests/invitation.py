@@ -114,4 +114,4 @@ def generate_invitations_for_event(test_only, party_type):
             invitation = Invitation(party=party, event=event_for_party_type)
             if not test_only:
                 invitation.save()
-    print(' -------- {} invitations party {} ({})'.format(count, party_type))
+    print(' -------- {} invitations party {}'.format(count, party_type))
