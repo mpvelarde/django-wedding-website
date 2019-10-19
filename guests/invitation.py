@@ -106,9 +106,9 @@ def generate_invitations_for_event(test_only, party_type):
     for party in parties_by_type:
         try:
             invitation = Invitation.objects.get(party=party, event=event_for_party_type)
-            print('invitation for party {} ({}) already exists'.format(party.name, party_type))
+            print('invitation for party {} ({}) already exists'.format(party.name, party.type))
         except Invitation.DoesNotExist:
-            print('generate invitation for party {} ({})'.format(party.name, party_type))
+            print('generate invitation for party {} ({})'.format(party.name, party.type))
             invitation = Invitation(party=party, event=event_for_party_type)
             if not test_only:
                 invitation.save()
