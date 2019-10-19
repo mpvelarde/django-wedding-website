@@ -85,7 +85,7 @@ def send_invitation_email(party, invitation_id, test_only=False, recipients=None
 
 
 def send_all_invitations(test_only, mark_as_sent):
-    to_send_to = Party.in_default_order().filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+    to_send_to = Party.in_default_order().filter(is_invited=True).exclude(is_attending=False)
     for party in to_send_to:
         send_invitation_email(party, test_only=test_only)
         if mark_as_sent:
@@ -101,7 +101,7 @@ def send_invitations_for_event(party_type, test_only, mark_as_sent):
         send_invitation_email(invitation.party, invitation.invitation_id, test_only=test_only)
 
 def generate_invitations_for_event(test_only, party_type):
-    parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True, invitation_sent=None)
+    parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True)
     event_for_party_type = Event.objects.get(type=party_type)
     for party in parties_by_type:
         print('generate invitation for party {} ({})'.format(party.name, party_type))

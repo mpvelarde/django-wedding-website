@@ -151,5 +151,5 @@ python manage.py send_save_the_dates
 
 Actually send:
 ```bash
-python manage.py send_save_the_dates --send --mark-sent'
+python manage.py send_save_the_dates --send --mark-sent
 ```
