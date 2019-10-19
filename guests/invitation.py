@@ -103,12 +103,15 @@ def send_invitations_for_event(party_type, test_only, mark_as_sent):
 def generate_invitations_for_event(test_only, party_type):
     parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True)
     event_for_party_type = Event.objects.get(type=party_type)
+    count = 0
     for party in parties_by_type:
+        count =+ 1
         try:
             invitation = Invitation.objects.get(party=party, event=event_for_party_type)
-            print('invitation for party {} ({}) already exists'.format(party.name, party_type))
+            print('invitation for party {} ({}) already exists'.format(party.name, party.type))
         except Invitation.DoesNotExist:
-            print('generate invitation for party {} ({})'.format(party.name, party_type))
+            print('generate invitation for party {} ({})'.format(party.name, party.type))
             invitation = Invitation(party=party, event=event_for_party_type)
             if not test_only:
                 invitation.save()
+    print(' -------- {} invitations party {} ({})'.format(count, party_type))
