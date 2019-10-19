@@ -103,6 +103,8 @@ class Invitation(models.Model):
     """
     An invitation per party per event
     """
+    class Meta:
+        unique_together = (('party', 'event'),)
 
     party = models.ForeignKey(Party, on_delete=models.PROTECT)
     event = models.ForeignKey(Event, on_delete=models.PROTECT)
