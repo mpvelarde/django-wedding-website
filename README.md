@@ -138,6 +138,10 @@ Compile the messages, this makes the a .mo file
 python3 manage.py compilemessages
 ```
 
+If mac can't find gettext
+```
+brew link gettext --force
+```
 
 ## Send Save The Dates
 Command to send all save the dates:

@@ -11,3 +11,23 @@ The main pieces to setup are:
 - Nginx
 - Gunicorn
 - Supervisor
+
+
+To update remote applicate
+
+```
+cd django-wedding-website
+source venv/bin/activate
+git pull origin master
+python manage.py collectstatic
+python manage.py makemigrations
+python manage.py migrate
+sudo supervisorctl restart wedding-website
+exit
+```
+
+If can't connect to github
+```
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa_github
+```
