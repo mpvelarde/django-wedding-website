@@ -1,4 +1,4 @@
-.PHONY: setkey update build
+.PHONY: setkey update build activate
 
 setkey:
 	eval `ssh-agent -s`; \
@@ -6,6 +6,9 @@ setkey:
 
 update:
 	git pull origin master
+
+activate:
+	source venv/bin/activate
 
 build:
 	python manage.py collectstatic; \
