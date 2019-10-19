@@ -37,6 +37,13 @@ def dashboard(request, event_id):
     ).order_by(
         'party__category', 'party__name'
     )
+    invited_parties = Party.objects.filter(
+        is_invited=True
+    ).filter(
+        Q(type=event.type) | Q(type='both')
+    ).order_by(
+        'party__category', 'party__name'
+    )
     parties_with_unopen_invites = pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = pending_invites.exclude(invitation_opened=None)
     attending_rsvp = RSVP.objects.filter(is_attending=True, invitation__event=event)
@@ -58,6 +65,7 @@ def dashboard(request, event_id):
         'guests': count_rsvp_guests_yes,
         'possible_guests':  count_invited_guests - count_rsvp_guests_yes,
         'not_coming_guests': count_rsvp_guests_no,
+        'invited_parties': invited_parties.count(),
         'pending_invites': pending_invites.count(),
         'pending_guests': count_invited_guests - count_rsvp_guests_yes - count_rsvp_guests_no,
         'guests_without_meals': guests_without_meals,
