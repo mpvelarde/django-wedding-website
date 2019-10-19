@@ -111,10 +111,15 @@ class Invitation(models.Model):
     invitation_id = models.CharField(max_length=32, db_index=True, default=_random_uuid, unique=True)
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
+    is_attending = models.NullBooleanField(default=None)
 
     @property
     def name(self):
         return u'{} {}'.format(self.party.name, self.event.name)
+    
+    @property
+    def any_guests_attending(self):
+        return any(self.rsvp_set.values_list('is_attending', flat=True))
 
     def __unicode__(self):
         return 'Invitation: {} {}'.format(self.party.name, self.event.name)
@@ -127,6 +132,8 @@ class RSVP(models.Model):
     """
     The reply for each event for each guest
     """
+    class Meta:
+        unique_together = (('guest', 'invitation'),)
 
     guest = models.ForeignKey(Guest, on_delete=models.PROTECT)
     invitation = models.ForeignKey(Invitation, on_delete=models.PROTECT)
@@ -135,7 +142,7 @@ class RSVP(models.Model):
     meal = models.CharField(max_length=20, choices=MEALS, null=True, blank=True)
 
     def __unicode__(self):
-        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name, self.event.name)
+        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name)
 
     def __str__(self):
-        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name, self.event.name)
+        return 'RSVP: {} {}'.format(self.guest.name, self.invitation.name)

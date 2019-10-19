@@ -6,10 +6,21 @@ from django.core.mail import EmailMultiAlternatives
 from django.urls import reverse
 from django.http import Http404
 from django.template.loader import render_to_string
-from guests.models import Party, Invitation, Event, MEALS
+from guests.models import Party, Invitation, Event, MEALS, RSVP
 from django.db.models import Q
 
 INVITATION_TEMPLATE = 'guests/email_templates/invitation.html'
+
+
+def get_or_make_rsvp(guest, invitation, is_attending, meal):
+    try:
+        rsvp = RSVP.objects.get(guest=guest, invitation=invitation)
+        rsvp.is_attending = is_attending
+        rsvp.meal = meal
+        rsvp.date_of_reply = datetime.utcnow()
+        return rsvp
+    except RSVP.DoesNotExist:
+        return RSVP(guest=guest, invitation=invitation, is_attending=is_attending, meal=meal, date_of_reply = datetime.utcnow())
 
 
 def guess_party_by_invite_id_or_404(invite_id):

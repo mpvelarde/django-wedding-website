@@ -38,7 +38,9 @@
         <section class="col-md-6">
         <form data-toggle="validator" class="invitation-details with-border form-horizontal" method="post">
             <h2 id="rsvp-header" class="text-center">{% trans "RSVP" %}</h2>
+            {% if rsvps|length == 0 %}
             <p>{% trans "Please RSVP by February 2020" %}</p>
+            {% endif %}
             <div class="clearfix"></div>
             {% csrf_token %}
             {% for guest in party.ordered_guests.all %}

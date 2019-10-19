@@ -11,7 +11,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
-    send_invitation_email, get_invite_by_id_or_404
+    send_invitation_email, get_invite_by_id_or_404, get_or_make_rsvp
 from guests.models import Guest, MEALS, Party, RSVP
 from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
     SAVE_THE_DATE_CONTEXT_MAP
@@ -73,6 +73,7 @@ def vhandler500(request, exception=None):
 def invitation(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
     invitation = get_invite_by_id_or_404(invite_id)
+    rsvps = RSVP.objects.filter(invitation=invitation)
     if invitation.invitation_opened is None:
         # update if this is the first time the invitation was opened
         invitation.invitation_opened = datetime.utcnow()
@@ -81,16 +82,18 @@ def invitation(request, invite_id):
         for response in _parse_invite_params(request.POST):
             guest = Guest.objects.get(pk=response.guest_pk)
             assert guest.party == party
-            rsvp = RSVP(guest=guest, invitation=invitation, is_attending=response.is_attending, meal=response.meal, date_of_reply = datetime.utcnow())
+            rsvp = get_or_make_rsvp(guest=guest, invitation=invitation, is_attending=response.is_attending, meal=response.meal)
             rsvp.save()
         if request.POST.get('comments'):
             comments = request.POST.get('comments')
             party.comments = comments if not party.comments else '{}; {}'.format(party.comments, comments)
-        party.is_attending = party.any_guests_attending
-        party.save()
+        invitation.is_attending = invitation.any_guests_attending
+        invitation.save()
         return HttpResponseRedirect(reverse('rsvp-confirm', args=[invite_id]))
     return render(request, template_name='guests/invitation.html', context={
         'party': party,
+        'invitation': invitation,
+        'rsvps': rsvps,
         'meals': MEALS,
         'main_image': 'save-the-date-purple.jpeg',
         'SITE_URL': settings.SITE_URL,
@@ -120,8 +123,10 @@ def _parse_invite_params(params):
 
 def rsvp_confirm(request, invite_id=None):
     party = guess_party_by_invite_id_or_404(invite_id)
+    invitation = get_invite_by_id_or_404(invite_id)
     return render(request, template_name='guests/rsvp_confirmation.html', context={
         'party': party,
+        'invitation': invitation,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
     })
 
