@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% block page_head %}
     <link href="{% static 'bigday/css/rsvp-confirmation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
@@ -7,7 +8,7 @@
     <div class="layer"></div>
     <div class="container" id="main">
         <h2>{% trans "Hi" %} {{ party.name }}! {% trans "Thanks for your response!" %}</h2>
-        {% if party.any_guests_attending %}
+        {% if invitation.any_guests_attending %}
             <p>
                 {% trans "We can't wait to celebrate with you!" %}
             </p>
