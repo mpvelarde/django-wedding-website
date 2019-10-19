@@ -122,6 +122,10 @@ class Invitation(models.Model):
     invitation_sent = models.DateTimeField(null=True, blank=True, default=None)
     invitation_opened = models.DateTimeField(null=True, blank=True, default=None)
 
+    @classmethod
+    def in_default_order(cls):
+        return cls.objects.order_by('event', 'party')
+
     @property
     def name(self):
         return u'{} {}'.format(self.party.name, self.event.name)
@@ -130,7 +134,7 @@ class Invitation(models.Model):
         return 'Invitation: {} {}'.format(self.party.name, self.event.name)
 
     def __str__(self):
-        return 'Invitation: {} {}'.format(self.party.name, self.event.name)
+        return 'Invitation: {} {}'.format(self.party.name, self.event.name, self.invitation_id)
 
 
 class RSVP(models.Model):
