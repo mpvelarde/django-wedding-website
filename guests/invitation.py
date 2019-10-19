@@ -25,7 +25,7 @@ def get_invite_by_id_or_404(invite_id):
         raise Http404()
 
 
-def get_invitation_context(party):
+def get_invitation_context(party, invitation_id):
     return {
         'title': "Lion's Head",
         'main_image': 'save-the-date-purple.jpeg',
@@ -33,7 +33,7 @@ def get_invitation_context(party):
         'font_color': '#000000',
         'page_title': "Maria Paz and Daniel - You're Invited!",
         'preheader_text': "You are invited!",
-        'invitation_id': party.invitation_id,
+        'invitation_id': invitation_id,
         'party_name': party.name,
         'SITE_URL': settings.SITE_URL,
         'party': party,
@@ -41,14 +41,14 @@ def get_invitation_context(party):
     }
 
 
-def send_invitation_email(party, test_only=False, recipients=None):
+def send_invitation_email(party, invitation_id, test_only=False, recipients=None):
     if recipients is None:
         recipients = party.guest_emails
     if not recipients:
         print(('===== WARNING: no valid email addresses found for {} =====').format(party))
         return
 
-    context = get_invitation_context(party)
+    context = get_invitation_context(party, invitation_id)
     context['email_mode'] = True
     template_html = render_to_string(INVITATION_TEMPLATE, context=context)
     template_text = "You're invited to Cory and Rowena's wedding. To view this invitation, visit {} in any browser.".format(
@@ -80,6 +80,14 @@ def send_all_invitations(test_only, mark_as_sent):
         if mark_as_sent:
             party.invitation_sent = datetime.now()
             party.save()
+
+def send_invitations_for_event(party_type, test_only, mark_as_sent):
+    event_for_invitations = Event.objects.get(type=party_type)
+    invitations_to_send = Invitation.in_default_order().filter(Q(event=event_for_invitations))
+    for invitation in invitations_to_send:
+        print('prepare to send {}'.format(invitation))
+        print('party to send to {}'.format(invitation.party))
+        send_invitation_email(invitation.party, invitation.invitation_id, test_only=test_only)
 
 def generate_invitations_for_event(test_only, party_type):
     parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True, invitation_sent=None)
