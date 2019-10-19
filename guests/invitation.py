@@ -104,7 +104,11 @@ def generate_invitations_for_event(test_only, party_type):
     parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True)
     event_for_party_type = Event.objects.get(type=party_type)
     for party in parties_by_type:
-        print('generate invitation for party {} ({})'.format(party.name, party_type))
-        invitation = Invitation(party=party, event=event_for_party_type)
-        if not test_only:
-            invitation.save()
+        invitation = Invitation.objects.get(party=party, event=event_for_party_type)
+        if invitation:
+            print('invitation for party {} ({}) already exists'.format(party.name, party_type))
+        else:
+            print('generate invitation for party {} ({})'.format(party.name, party_type))
+            invitation = Invitation(party=party, event=event_for_party_type)
+            if not test_only:
+                invitation.save()
