@@ -21,7 +21,7 @@ class GuestAdmin(admin.ModelAdmin):
 
 
 class InvitationAdmin(admin.ModelAdmin): 
-    list_display = ('party', 'event', 'save_the_date_sent', 'save_the_date_opened', 'invitation_id', 'invitation_sent', 'invitation_opened')
+    list_display = ('party', 'event', 'invitation_sent', 'invitation_opened', 'invitation_id', 'invitation_sent', 'invitation_opened')
     list_filter = ('party', 'event')
 
 
