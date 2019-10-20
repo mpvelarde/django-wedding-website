@@ -100,7 +100,7 @@ def send_all_invitations(test_only, mark_as_sent):
 
 def send_invitations_for_event(party_type, test_only, mark_as_sent):
     event_for_invitations = Event.objects.get(type=party_type)
-    invitations_to_send = Invitation.in_default_order().filter(Q(event=event_for_invitations))
+    invitations_to_send = Invitation.in_default_order().filter(Q(event=event_for_invitations)).filter(invitation_sent=None)
     for invitation in invitations_to_send:
         print('prepare to send {}'.format(invitation))
         print('party to send to {}'.format(invitation.party))
