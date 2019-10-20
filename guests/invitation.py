@@ -105,6 +105,9 @@ def send_invitations_for_event(party_type, test_only, mark_as_sent):
         print('prepare to send {}'.format(invitation))
         print('party to send to {}'.format(invitation.party))
         send_invitation_email(invitation.party, invitation.invitation_id, test_only=test_only)
+        if mark_as_sent:
+            invitation.invitation_sent = datetime.now()
+            invitation.save()
 
 def generate_invitations_for_event(test_only, party_type):
     parties_by_type = Party.in_default_order().filter(Q(type=party_type) | Q(type='both')).filter(is_invited=True)
