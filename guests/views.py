@@ -63,7 +63,7 @@ def dashboard(request, event_id):
     return render(request, 'guests/dashboard.html', context={
         'event': event,
         'guests': count_rsvp_guests_yes,
-        'possible_guests':  count_invited_guests - count_rsvp_guests_yes,
+        'possible_guests':  count_invited_guests,
         'not_coming_guests': count_rsvp_guests_no,
         'invited_parties': invited_parties.count(),
         'pending_invites': pending_invites.count(),
