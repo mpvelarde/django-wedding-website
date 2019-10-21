@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-19 16:33+0000\n"
+"POT-Creation-Date: 2019-10-21 21:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr "Inglés"
 
 #: bigday/templates/base.html:12 bigday/templates/base.html:24
 #: bigday/templates/base.html:25 bigday/templates/home.html:19
-#: bigday/templates/home.html:46
+#: bigday/templates/home.html:49
 msgid "Daniel and Maria Paz"
 msgstr "Daniel y María Paz"
 
@@ -40,75 +40,79 @@ msgstr "Inicio"
 msgid "Event"
 msgstr "Evento"
 
-#: bigday/templates/home.html:31
+#: bigday/templates/home.html:31 bigday/templates/partials/scotland.html:5
+msgid "Scotland"
+msgstr "Escocia"
+
+#: bigday/templates/home.html:34
 msgid "Everything Else"
 msgstr "Todo lo demás"
 
-#: bigday/templates/home.html:34
+#: bigday/templates/home.html:37
 msgid "Contact"
 msgstr "Contacto"
 
-#: bigday/templates/home.html:48
+#: bigday/templates/home.html:51
 msgid "Scone, Perth, UK"
 msgstr "Scone, Perth, Reino Unido"
 
-#: bigday/templates/home.html:49
+#: bigday/templates/home.html:52
 msgid "May 1st, 2020"
 msgstr "1 de mayo del 2020"
 
-#: bigday/templates/home.html:50
+#: bigday/templates/home.html:53
 msgid "Guayaquil, Guayas, Ecuador"
 msgstr ""
 
-#: bigday/templates/home.html:51
+#: bigday/templates/home.html:54
 msgid "July 11th, 2020"
 msgstr "11 de julio del 2020"
 
-#: bigday/templates/home.html:59
+#: bigday/templates/home.html:62
 msgid "Welcome!"
 msgstr "¡Bienvenidos!"
 
-#: bigday/templates/home.html:62
+#: bigday/templates/home.html:65
 msgid "Hello friends and family!"
 msgstr "¡Hola familia y amigos!"
 
-#: bigday/templates/home.html:65
+#: bigday/templates/home.html:68
 msgid "Thanks for sharing our wedding celebrations with us!"
 msgstr "¡Gracias por celebrar nuestra boda con nosotros!"
 
-#: bigday/templates/home.html:66
+#: bigday/templates/home.html:69
 msgid "As we wait for/figure out the big day, "
 msgstr "Mientras esperamos y planificamos el gran día, "
 
-#: bigday/templates/home.html:67
+#: bigday/templates/home.html:70
 msgid "we have created this website to keep you up-to-date with everything."
 msgstr "hemos creado este sitio web para mantenerlos informados."
 
-#: bigday/templates/home.html:70
+#: bigday/templates/home.html:73
 msgid "Looking forward to celebrate with you!"
 msgstr "¡Esperamos celebrar contigo!"
 
-#: bigday/templates/home.html:72
+#: bigday/templates/home.html:75
 msgid "- Daniel and Maria Paz"
 msgstr "- Daniel y María Paz."
 
-#: bigday/templates/home.html:86
+#: bigday/templates/home.html:89
 msgid "Guayaquil"
 msgstr "Guayaquil"
 
-#: bigday/templates/home.html:98
+#: bigday/templates/home.html:101
 msgid "Murrayshall"
 msgstr "Murrayshall"
 
-#: bigday/templates/home.html:110 bigday/templates/partials/story.html:5
+#: bigday/templates/home.html:113 bigday/templates/partials/story.html:5
 msgid "Our Story"
 msgstr "Nuestra historia"
 
-#: bigday/templates/home.html:131
+#: bigday/templates/home.html:137
 msgid "Contact us!"
 msgstr "¡Contáctenos!"
 
-#: bigday/templates/home.html:133
+#: bigday/templates/home.html:139
 msgid "If you have any questions don't hesitate to reach out!"
 msgstr "¡Si tienes alguna pregunta no dudes en contactarnos!"
 
@@ -117,7 +121,7 @@ msgid "Wedding"
 msgstr "Boda"
 
 #: bigday/templates/partials/event.html:9
-#: bigday/templates/partials/event.html:33
+#: bigday/templates/partials/event.html:39
 msgid "What"
 msgstr "¿Qué?"
 
@@ -130,7 +134,7 @@ msgstr ""
 "prepárense para bailar ceilidh"
 
 #: bigday/templates/partials/event.html:11
-#: bigday/templates/partials/event.html:35
+#: bigday/templates/partials/event.html:41
 #: guests/templates/guests/invitation.html:25
 msgid "When"
 msgstr "¿Cuándo?"
@@ -141,21 +145,49 @@ msgid "Friday, May 1st, 2020, 2:00 pm"
 msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
 
 #: bigday/templates/partials/event.html:13
-#: bigday/templates/partials/event.html:37
+#: bigday/templates/partials/event.html:43
 #: guests/templates/guests/invitation.html:27
 msgid "Where"
 msgstr "¿Dónde?"
 
 #: bigday/templates/partials/event.html:15
+#: bigday/templates/partials/scotland.html:27
+#: bigday/templates/partials/scotland.html:29
 #: guests/templates/guests/invitation.html:29
 msgid "Murrayshall Country House Hotel"
 msgstr ""
 
-#: bigday/templates/partials/event.html:30
+#: bigday/templates/partials/event.html:21
+msgid "Attire"
+msgstr "Vestimenta"
+
+#: bigday/templates/partials/event.html:22
+msgid "Cocktail/Semi-Formal"
+msgstr "Cóctel/Semi-formal"
+
+#: bigday/templates/partials/event.html:23
+msgid "Transportation"
+msgstr "Transporte"
+
+#: bigday/templates/partials/event.html:24
+msgid "We will arrange bus pick up options for guests from Dundee/Perth"
+msgstr ""
+"Vamos a organizar transporte para llevar a los invitados desde ubicaciones "
+"predefinas en Dundee/Perth"
+
+#: bigday/templates/partials/event.html:25
+msgid "Parking"
+msgstr "Estacionamiento"
+
+#: bigday/templates/partials/event.html:26
+msgid "Parking is available on-site at Murrayshall"
+msgstr "Hay estacionamiento disponible en Murrayshall"
+
+#: bigday/templates/partials/event.html:36
 msgid "Party"
 msgstr "Fiesta"
 
-#: bigday/templates/partials/event.html:34
+#: bigday/templates/partials/event.html:40
 msgid ""
 "Ecuadorian food, drinks and hopefully a party bus, due to life and things we "
 "still have to define this."
@@ -163,11 +195,11 @@ msgstr ""
 "Comida ecuatoriana, trago y ojalá una chiva, pronto tendremos más detalles "
 "de este evento."
 
-#: bigday/templates/partials/event.html:36
+#: bigday/templates/partials/event.html:42
 msgid "Saturday, July 11 2020"
 msgstr "Sábado 11 de julio de 2020"
 
-#: bigday/templates/partials/event.html:39
+#: bigday/templates/partials/event.html:45
 msgid "Somewhere in Guayaquil"
 msgstr "Algún lugar en Guayaquil"
 
@@ -228,6 +260,169 @@ msgid ""
 msgstr ""
 "Después de dos años de vivir juntos hicimos un viaje a la costa oeste de "
 "Escocia. Daniel me propuso matrimonio en el Castillo de Stonefield."
+
+#: bigday/templates/partials/scotland.html:7
+msgid "Getting There"
+msgstr "¿Cómo llegar?"
+
+#: bigday/templates/partials/scotland.html:9
+msgid ""
+"Murrayshall is located in Perth country side, 10 min drive from Perth city "
+"center and about 35 minutes drive from Dundee."
+msgstr ""
+"Murrayshall está ubicado a las afueras de Perth, a 10 minutos en carro del "
+"centro de Perth y aproximadamente 35 minutos en carro de Dundee."
+
+#: bigday/templates/partials/scotland.html:12
+msgid ""
+"For those flying into Scotland we recommend Edinburgh, Aberdeen or Glasgow "
+"airport. From there you can catch a train or coach to Perth or Dundee."
+msgstr ""
+"Para aquellos que vienen del exterior, recomendamos volar a Edimburgo, "
+"Aberdeen o Glasgow. Del aeropuerto pueden tomar un tren o bus a Dundee o "
+"Perth."
+
+#: bigday/templates/partials/scotland.html:15
+msgid ""
+"We will arrange coaches to transport guests from Dundee/Perth to the wedding "
+"venue. For those who are not staying at Murrayshall, there will be taxis "
+"available to get back to your accommodation."
+msgstr ""
+"Vamos a contratar transporte para llevar a los invitados desde Dundee/Perth "
+"al lugar de la boda. Para aquellos que no se queden Murrayshall, van a haber "
+"taxis disponibles para regresar a su alojamiento."
+
+#: bigday/templates/partials/scotland.html:18
+msgid "Where to Stay"
+msgstr "Estadía"
+
+#: bigday/templates/partials/scotland.html:20
+msgid ""
+"If you are comming from abroad, we recommend staying in Dundee the days "
+"before the wedding as we will plan activities. For the day of the wedding "
+"you can also stay at Murrayshall, we recommend to book in advance."
+msgstr ""
+"Si vienen del exterior les recomendamos quedarse en Dundee los días antes de "
+"la boda, vamos a planear actividades. Para el día de la boda se pueden "
+"quedar en Murrayshall, les recomendamos reservar con tiempo."
+
+#: bigday/templates/partials/scotland.html:23
+msgid ""
+"Below is a brief list of recommendations on places to stay in Dundee/Perth."
+msgstr ""
+"A continuación está una breve lista de opciones de alojamiento en Dundee o "
+"Perth."
+
+#: bigday/templates/partials/scotland.html:29
+msgid ""
+"is a beautiful hotel and golf course in Perth's countryside and is our "
+"wedding venue. We recommend booking in advance and refer to May 1st wedding."
+msgstr ""
+"es un hotel muy bonito y campo de golf en las afueras de Perth y es el lugar "
+"de la boda. Les recomendamos reservar con tiempo y mencionar que son "
+"invitados de la boda del 1ro de mayo."
+
+#: bigday/templates/partials/scotland.html:33
+msgid "Holiday Cottages"
+msgstr "Cabañas"
+
+#: bigday/templates/partials/scotland.html:35
+msgid "If you want to get away from the city,"
+msgstr "Si se quieren quedar fuera de la ciudad,"
+
+#: bigday/templates/partials/scotland.html:35
+msgid "has good options available in Angus and Perth."
+msgstr "tiene buenas opciones disponibles en Angus y Perth."
+
+#: bigday/templates/partials/scotland.html:36
+msgid "You can use the following link to start your search:"
+msgstr "Pueden user el siguiente link para empezar su búsqueda:"
+
+#: bigday/templates/partials/scotland.html:40
+msgid "Vacation rentals"
+msgstr "Airbnb o Booking.com"
+
+#: bigday/templates/partials/scotland.html:42
+#, fuzzy
+#| msgid ""
+#| "                            Both <a target=\"_blank\" href=\"https://www."
+#| "booking.com\">booking.com</a> and <a target=\"_blank\" href=\"https://www."
+#| "airbnb.com/\">airbnb</a> have a number of vacation rentals in the area.\n"
+#| "                            This is also a highly recommended and often "
+#| "more affordable option for those who don't mind something a bit more self-"
+#| "service."
+msgid ""
+"\n"
+"                            Both <a target=\"_blank\" href=\"https://www."
+"booking.com\">booking.com</a> and <a target=\"_blank\" href=\"https://www."
+"airbnb.com/\">airbnb</a> have a number of vacation rentals in the area.\n"
+"                            This is also a highly recommended and often more "
+"affordable option for those who don't mind something a bit more self-service."
+msgstr ""
+"                            Ambos <a target=\"_blank\" href=\"https://www."
+"booking.com\">booking.com</a> y <a target=\"_blank\" href=\"https://www."
+"airbnb.com/\">airbnb</a> tiene lugares disponiblesen el area.\n"
+"                            Para los que quieran una opción más asequible."
+
+#: bigday/templates/partials/scotland.html:45
+msgid "You can use the following links to start your searches:"
+msgstr "Pueden usar los siguientes links para empezar su búsqueda:"
+
+#: bigday/templates/partials/scotland.html:50
+msgid "Things to Do"
+msgstr "Qué hacer"
+
+#: bigday/templates/partials/scotland.html:51
+msgid ""
+"There's no shortage of things to do in Scotland! Some ideas are listed below."
+msgstr ""
+"No les van a faltar cosas que hacer en Escocia, a continuación hay unas "
+"ideas."
+
+#: bigday/templates/partials/scotland.html:52
+msgid "Distillery Tours"
+msgstr "Toures a distilerías"
+
+#: bigday/templates/partials/scotland.html:54
+msgid ""
+"If you are a whiskey fan you can't miss a distillery tour.\n"
+"                    The closest are about an hour drive north of Dundee, in "
+"the small town of Pitlochry, right at the gateway to the Highlands:\n"
+"                    <a href=\"https://www.edradour.com\">Edradour</a>, <a "
+"href=\"https://www.malts.com/en-gb/visit-our-distilleries/Blair-Athol"
+"\">Blair Athol</a>."
+msgstr ""
+"Los fans del whiskey fan no se pueden perder un tour a una alguna de las "
+"distilerías de whiskey escocés.\n"
+"                    Las más cercanas están a una hora al norte de Dundee, en "
+"el pequeño pueblo de Pitlochry, justo en la entrada a las tierras altas:\n"
+"                    <a href=\"https://www.edradour.com\">Edradour</a>, <a "
+"href=\"https://www.malts.com/en-gb/visit-our-distilleries/Blair-Athol"
+"\">Blair Athol</a>."
+
+#: bigday/templates/partials/scotland.html:58
+msgid "Cairngorms National Park"
+msgstr "Parque Nacional Cairngorms"
+
+#: bigday/templates/partials/scotland.html:60
+msgid ""
+"<a href=\"https://cairngorms.co.uk/discover-explore/things-to-do/"
+"\">Cairngorms National Park</a> has something for everyone. \n"
+"                    Walking/cycling trails, scenic spots, outdoor sports, "
+"castles, etc."
+msgstr ""
+"<a href=\"https://cairngorms.co.uk/discover-explore/things-to-do/\">El "
+"Parque Nacional Cairngorms</a> tiene algo para todos los gustos. \n"
+"                    Caminatas, ciclismo, miradores, deportes al aire libre, "
+"castillos, etc."
+
+#: bigday/templates/partials/scotland.html:63
+msgid "More"
+msgstr "Más"
+
+#: bigday/templates/partials/scotland.html:65
+msgid "We will gather more information and update this soon..."
+msgstr "Mientras tengamos más información vamos a ir actualizando esta página..."
 
 #: bigday/templates/partials/story.html:8
 msgid ""

@@ -28,6 +28,9 @@
                         <a class="page-scroll" href="#event">{% trans "Event" %}</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#scotland">{% trans "Scotland" %}</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#other-stuff">{% trans "Everything Else" %}</a>
                     </li>
                     <li>
@@ -117,6 +120,9 @@
         </div>
     </section>
     {% include 'partials/event.html' %}
+    <section id="scotland">
+        {% include 'partials/scotland.html' %}
+    </section>
     <section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
     </section>
