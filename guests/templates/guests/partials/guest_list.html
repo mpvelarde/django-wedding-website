@@ -1,6 +1,6 @@
 <h1>Guests</h1>
 <ul>
-{% for rsvp in object_list %}
+{% for rsvp in guest_list %}
     <li>{{ rsvp.guest.name }}</li>
 {% empty %}
     <li>No guests yet.</li>

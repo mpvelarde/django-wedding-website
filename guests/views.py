@@ -47,13 +47,7 @@ def dashboard(request, event_id):
     parties_with_unopen_invites = pending_invites.filter(invitation_opened=None)
     parties_with_open_unresponded_invites = pending_invites.exclude(invitation_opened=None)
     attending_rsvp = RSVP.objects.filter(is_attending=True, invitation__event=event)
-    guests_without_meals = attending_rsvp.filter(
-        guest__is_child=False
-    ).filter(
-        Q(meal__isnull=True) | Q(meal='')
-    ).order_by(
-        'invitation__party__category', 'first_name'
-    )
+
     meal_breakdown = attending_rsvp.exclude(meal=None).values('meal').annotate(count=Count('*'))
     category_breakdown = attending_rsvp.values('invitation__party__category').annotate(count=Count('*'))
 
@@ -68,7 +62,7 @@ def dashboard(request, event_id):
         'invited_parties': invited_parties.count(),
         'pending_invites': pending_invites.count(),
         'pending_guests': count_invited_guests - count_rsvp_guests_yes - count_rsvp_guests_no,
-        'guests_without_meals': guests_without_meals,
+        'attending_rsvp': attending_rsvp,
         'parties_with_unopen_invites': parties_with_unopen_invites,
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),
