@@ -1,8 +1,16 @@
-<h1>Guests</h1>
-<ul>
-{% for rsvp in guest_list %}
-    <li>{{ rsvp.guest.name }}</li>
-{% empty %}
-    <li>No guests yet.</li>
-{% endfor %}
-</ul>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Guests</th>
+            <th>Meal</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for rsvp in guest_list %}
+        <tr>
+            <td>{{ rsvp.guest.name }}</td>
+            <td>{{ rsvp.meal }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
