@@ -32,7 +32,12 @@ def export_guests(request):
 @login_required
 def dashboard(request, event_id):
     event = get_event_by_id_or_404(event_id)
-    pending_invites = Invitation.objects.filter(
+    total_invites = Invitation.objects.filter(
+        party__is_invited=True, event=event
+    ).order_by(
+        'party__category', 'party__name'
+    )
+    pending_invites = total_invites.filter(
         party__is_invited=True, is_attending=None, event=event
     ).order_by(
         'party__category', 'party__name'
@@ -66,7 +71,7 @@ def dashboard(request, event_id):
         'parties_with_unopen_invites': parties_with_unopen_invites,
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),
-        'total_invites': Party.objects.filter(is_invited=True).count(),
+        'total_invites': total_invites.count(),
     })
 
 def vhandler404(request, exception=None):
