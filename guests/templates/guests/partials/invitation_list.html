@@ -5,6 +5,7 @@
             <th>Type</th>
             <th>Category</th>
             <th>Sent to</th>
+            <th>Link</th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
             <td>{{ invitation.party.type }}</td>
             <td>{{ invitation.party.category }}</td>
             <td>{{ invitation.party.guest_emails|join:"<br>" }}</td>
+            <td><a href="{% url 'invitation' invitation.invitation_id %}" >Link</a></td>
         </tr>
     {% endfor %}
     </tbody>
