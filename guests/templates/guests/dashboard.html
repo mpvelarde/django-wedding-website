@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td>Not Coming</td>
-                <td>{{ not_coming_guests }}</td>
+                <td>{{ not_coming_guests_count }}</td>
             </tr>
             </tbody>
         </table>
@@ -40,9 +40,16 @@
                 {% endwith %}
             </div>
         </div>
-        <div class="col-lg-6">
-                <h1>Attending Guests</h1>
-                {% with guest_list=attending_rsvp %}
+        <div class="row">
+            <div class="col-lg-6">
+                    <h1>Attending Guests</h1>
+                    {% with guest_list=attending_rsvp %}
+                        {% include "guests/partials/guest_list.html" %}
+                    {% endwith %}
+            </div>
+            <div class="col-lg-6">
+                <h1>Not coming</h1>
+                {% with guest_list=not_coming_guests %}
                     {% include "guests/partials/guest_list.html" %}
                 {% endwith %}
             </div>

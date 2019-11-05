@@ -56,14 +56,17 @@ def dashboard(request, event_id):
     meal_breakdown = attending_rsvp.exclude(meal=None).values('meal').annotate(count=Count('*'))
     category_breakdown = attending_rsvp.values('invitation__party__category').annotate(count=Count('*'))
 
+    not_coming_guests = RSVP.objects.filter(is_attending=False, invitation__event=event)
+
     count_rsvp_guests_yes = RSVP.objects.filter(is_attending=True, invitation__event=event).count()
-    count_rsvp_guests_no = RSVP.objects.filter(is_attending=False, invitation__event=event).count()
+    count_rsvp_guests_no = not_coming_guests.count()
     count_invited_guests = Guest.objects.filter(party__is_invited=True).filter(Q(party__type=event.type) | Q(party__type='both')).count()
     return render(request, 'guests/dashboard.html', context={
         'event': event,
         'guests': count_rsvp_guests_yes,
         'possible_guests':  count_invited_guests,
-        'not_coming_guests': count_rsvp_guests_no,
+        'not_coming_guests': not_coming_guests,
+        'not_coming_guests_count': count_rsvp_guests_no,
         'invited_parties': invited_parties.count(),
         'pending_invites': pending_invites.count(),
         'pending_guests': count_invited_guests - count_rsvp_guests_yes - count_rsvp_guests_no,
