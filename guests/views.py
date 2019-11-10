@@ -57,6 +57,7 @@ def dashboard(request, event_id):
         'event': event,
         'guests': count_rsvp_guests_yes,
         'possible_guests':  count_invited_guests - count_rsvp_guests_no,
+        'total_guests':  count_invited_guests,
         'not_coming_guests': not_coming_guests,
         'not_coming_guests_count': count_rsvp_guests_no,
         'pending_invites': pending_invites.count(),
