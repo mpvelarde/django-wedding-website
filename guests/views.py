@@ -47,6 +47,7 @@ def dashboard(request, event_id):
     attending_rsvp = RSVP.objects.filter(is_attending=True, invitation__event=event)
 
     meal_breakdown = attending_rsvp.exclude(meal=None).values('meal').annotate(count=Count('*'))
+    category_breakdown = attending_rsvp.values('invitation__party__category').annotate(count=Count('*'))
 
     not_coming_guests = RSVP.objects.filter(is_attending=False, invitation__event=event)
 
@@ -67,6 +68,8 @@ def dashboard(request, event_id):
         'parties_with_open_unresponded_invites': parties_with_open_unresponded_invites,
         'unopened_invite_count': parties_with_unopen_invites.count(),
         'total_invites': total_invites.count(),
+        'meal_breakdown': meal_breakdown,
+        'category_breakdown': category_breakdown,
     })
 
 def vhandler404(request, exception=None):
