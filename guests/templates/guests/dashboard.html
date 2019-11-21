@@ -37,12 +37,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for category in category_breakdown %}
                         <tr>
-                            {% for category in category_breakdown %}
                             <td>{{ category.invitation__party__category }}</td>
                             <td>{{ category.count }}</td>
-                            {% endfor %}
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -56,12 +56,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for meal in meal_breakdown %}
                         <tr>
-                            {% for meal in meal_breakdown %}
                             <td>{{ meal.meal }}</td>
                             <td>{{ meal.count }}</td>
-                            {% endfor %}
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
