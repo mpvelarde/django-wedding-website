@@ -28,6 +28,48 @@
         </table>
         <div class="row">
             <div class="col-lg-6">
+                    {{ category_breakdown }}
+                <h1>Guests by category</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for category in category_breakdown %}
+                            <th>{{ category.party__category }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for category in category_breakdown %}
+                            <td>{{ category.count }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <h1>Meal choices</h1>
+                {{ meal_breakdown }}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for meal in meal_breakdown %}
+                            <th>{{ meal.meal }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for meal in meal_breakdown %}
+                            <td>{{ meal.count }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
                 <h1>Unopened Invitations</h1>
                 {% with invitation_list=parties_with_unopen_invites %}
                     {% include "guests/partials/invitation_list.html" %}
