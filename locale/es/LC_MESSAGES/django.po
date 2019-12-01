@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 18:00+0000\n"
+"POT-Creation-Date: 2019-12-01 22:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,6 +115,7 @@ msgstr "Cena de bienvenida"
 #: bigday/templates/partials/event.html:9
 #: bigday/templates/partials/event.html:34
 #: bigday/templates/partials/event.html:64
+#: guests/templates/guests/invitation.html:25
 msgid "What"
 msgstr "¿Qué?"
 
@@ -127,19 +128,18 @@ msgstr ""
 #: bigday/templates/partials/event.html:11
 #: bigday/templates/partials/event.html:36
 #: bigday/templates/partials/event.html:66
-#: guests/templates/guests/invitation.html:25
+#: guests/templates/guests/invitation.html:27
 msgid "When"
 msgstr "¿Cuándo?"
 
 #: bigday/templates/partials/event.html:12
-#, fuzzy
 msgid "Thursday, April 30th, 2020, 6:30 pm"
 msgstr "Jueves 30 de abril de 2020, 6:30 pm"
 
 #: bigday/templates/partials/event.html:13
 #: bigday/templates/partials/event.html:38
 #: bigday/templates/partials/event.html:68
-#: guests/templates/guests/invitation.html:27
+#: guests/templates/guests/invitation.html:29
 msgid "Where"
 msgstr "¿Dónde?"
 
@@ -167,7 +167,7 @@ msgid "Transportation is not provided. Please plan responsibly."
 msgstr "Transporte no será provisto, por favor planear con tiempo."
 
 #: bigday/templates/partials/event.html:31
-msgid "Ceremony"
+msgid "Wedding"
 msgstr "Ceremonia"
 
 #: bigday/templates/partials/event.html:35
@@ -175,7 +175,6 @@ msgid "The official bit, a toast and a meal at lovely Murrayshall House Hotel"
 msgstr "La parte oficial, un brindis y comida en el Hotal Murrayshall"
 
 #: bigday/templates/partials/event.html:37
-#: guests/templates/guests/invitation.html:26
 msgid "Friday, May 1st, 2020, 2:00 pm"
 msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
 
@@ -183,7 +182,7 @@ msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
 #: bigday/templates/partials/event.html:70
 #: bigday/templates/partials/scotland.html:28
 #: bigday/templates/partials/scotland.html:30
-#: guests/templates/guests/invitation.html:29
+#: guests/templates/guests/invitation.html:31
 msgid "Murrayshall Country House Hotel"
 msgstr ""
 
@@ -209,8 +208,8 @@ msgid "Parking is available on-site at Murrayshall"
 msgstr "Hay estacionamiento disponible en Murrayshall"
 
 #: bigday/templates/partials/event.html:61
-msgid "Ceilidh & Party"
-msgstr "Recepción y Ceilidh"
+msgid "Evening Reception"
+msgstr "Recepción"
 
 #: bigday/templates/partials/event.html:65
 msgid ""
@@ -462,8 +461,9 @@ msgid ""
 "visitscotland.com/destinations-maps/loch-ness/\">Visit Loch Ness</a>. \n"
 "                        <a target=\"_blank\" href=\"https://www."
 "visitscotland.com/destinations-maps/inverness/\">Visit Inverness</a>."
-msgstr "Si estás por las tierras altas, puedes tratar de encontrar a Nessie (mejor conocido"
-"como el Monstruo del Lago Ness). Cerca está la ciudad de Inverness.\n"
+msgstr ""
+"Si estás por las tierras altas, puedes tratar de encontrar a Nessie (mejor "
+"conocidocomo el Monstruo del Lago Ness). Cerca está la ciudad de Inverness.\n"
 "                        <a target=\"_blank\" href=\"https://www."
 "visitscotland.com/destinations-maps/loch-ness/\">Visita el Lago Ness</a>. \n"
 "                        <a target=\"_blank\" href=\"https://www."
@@ -507,7 +507,8 @@ msgid ""
 "history and ghost stories, better book in advance.\n"
 "                        <a target=\"_blank\" href=\"https://www."
 "realmarykingsclose.com/\">Visit the website to book a tour</a>"
-msgstr "Descubre las calles subterráneas de Edimburgo del año 1600's, un poco de "
+msgstr ""
+"Descubre las calles subterráneas de Edimburgo del año 1600's, un poco de "
 "historias y cuentos de fantasmas, es preferible reservar con tiempo.\n"
 "                        <a target=\"_blank\" href=\"https://www."
 "realmarykingsclose.com/\">Visita el sitio web para reservar un tour</a>"
@@ -520,8 +521,9 @@ msgstr ""
 msgid ""
 "Small pub sitting on one of Edinburgh famous closes, where you can order a "
 "flight of local whiskies for a reasonable price."
-msgstr "Pequeño pub en uno de los famosos callejones de Edimburgo, puedes pedir "
-"un flight de whiskies locales por un precio razonable."
+msgstr ""
+"Pequeño pub en uno de los famosos callejones de Edimburgo, puedes pedir un "
+"flight de whiskies locales por un precio razonable."
 
 #: bigday/templates/partials/scotland.html:173
 msgid "Banshee Labyrinth"
@@ -531,8 +533,9 @@ msgstr ""
 msgid ""
 "Haunted-themed pub, build in Edinburgh's underground streets. It has a pub, "
 "cinema and a dance floor, fancy watching a movie in a dungeon?"
-msgstr "Pub embrujado, construido en las calles subterráneas de Edimburgo. Tiene un bar, "
-"cine y pista de baile."
+msgstr ""
+"Pub embrujado, construido en las calles subterráneas de Edimburgo. Tiene un "
+"bar, cine y pista de baile."
 
 #: bigday/templates/partials/scotland.html:182
 msgid "Arthur Seat"
@@ -542,8 +545,9 @@ msgstr ""
 msgid ""
 "Main peak of an extinct volcano, perfect for a hike close to the city "
 "centre. From here you can enjoy views of the city an the Firth of Forth."
-msgstr "Cumbre de un volcán inactivo, perfecto para hacer senderismo cerca del centro "
-"de la ciudad. Mirador de la ciudad y el golfo de Forth."
+msgstr ""
+"Cumbre de un volcán inactivo, perfecto para hacer senderismo cerca del "
+"centro de la ciudad. Mirador de la ciudad y el golfo de Forth."
 
 #: bigday/templates/partials/scotland.html:191
 msgid "Calton Hill"
@@ -553,8 +557,10 @@ msgstr ""
 msgid ""
 "If hiking is not your thing but still would love a view from the city, you "
 "can go up Calton Hill. Here you can also find several natinal monuments."
-msgstr "Si senderismo no es lo tuyo pero te gustaría tener una buena vista de la ciudad, "
-"puedes subir a Calton Hill. Aquí también hay varios monumentos de Escocia."
+msgstr ""
+"Si senderismo no es lo tuyo pero te gustaría tener una buena vista de la "
+"ciudad, puedes subir a Calton Hill. Aquí también hay varios monumentos de "
+"Escocia."
 
 #: bigday/templates/partials/scotland.html:200
 msgid "Edinburgh Castle"
@@ -621,47 +627,43 @@ msgid ""
 "planning!"
 msgstr " "
 
-#: guests/templates/guests/invitation.html:22
-msgid "Details"
-msgstr "Detalles"
-
-#: guests/templates/guests/invitation.html:30
+#: guests/templates/guests/invitation.html:32
 msgid "Murrayshall Rd, Scone, Perth PH2 7PH, UK"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:33
+#: guests/templates/guests/invitation.html:35
 msgid "Please visit"
 msgstr "Para más información visita "
 
-#: guests/templates/guests/invitation.html:33
+#: guests/templates/guests/invitation.html:35
 msgid "for more info."
 msgstr " "
 
-#: guests/templates/guests/invitation.html:40
+#: guests/templates/guests/invitation.html:42
 msgid "RSVP"
 msgstr ""
 
-#: guests/templates/guests/invitation.html:42
+#: guests/templates/guests/invitation.html:44
 msgid "Please RSVP by February 2020"
 msgstr "Por favor confirmar asistencia antes de Febrero del 2020"
 
-#: guests/templates/guests/invitation.html:51
+#: guests/templates/guests/invitation.html:53
 msgid "will attend"
 msgstr "asistirá"
 
-#: guests/templates/guests/invitation.html:54
+#: guests/templates/guests/invitation.html:56
 msgid "will not attend"
 msgstr "lamenta no ir"
 
-#: guests/templates/guests/invitation.html:61
+#: guests/templates/guests/invitation.html:63
 msgid "and will eat"
 msgstr "va a comer"
 
-#: guests/templates/guests/invitation.html:72
+#: guests/templates/guests/invitation.html:74
 msgid "Questions/comments/well wishes"
 msgstr "Preguntas/comentarios/buenos deseos"
 
-#: guests/templates/guests/invitation.html:76
+#: guests/templates/guests/invitation.html:78
 msgid "Submit Response"
 msgstr "Enviar respuesta"
 
@@ -2059,11 +2061,17 @@ msgstr "Comunidad Django"
 msgid "Connect, get help, or contribute"
 msgstr "Conéctate, consigue ayuda, o contribuye"
 
+#~ msgid "Ceremony"
+#~ msgstr "Ceremonia"
+
+#~ msgid "Ceilidh & Party"
+#~ msgstr "Recepción y Ceilidh"
+
+#~ msgid "Details"
+#~ msgstr "Detalles"
+
 #~ msgid "July 11th, 2020"
 #~ msgstr "11 de julio del 2020"
-
-#~ msgid "Wedding"
-#~ msgstr "Boda"
 
 #~ msgid "Cocktail/Semi-Formal"
 #~ msgstr "Cóctel/Semi-formal"
