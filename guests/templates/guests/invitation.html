@@ -22,6 +22,8 @@
                 <h2 class="text-center">{{ invitation.event.name }}</h2>
                 <div class="clearfix"></div>
                 <dl class="dl-horizontal lead">
+                        <dt>{% trans "What" %}</dt>
+                        <dd>{{ invitation.event.description }}</dd>
                         <dt>{% trans "When" %}</dt>
                         <dd>{{ invitation.event.date }}</dd>
                         <dt>{% trans "Where" %}</dt>

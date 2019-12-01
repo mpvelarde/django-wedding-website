@@ -90,6 +90,7 @@ class Event(models.Model):
     """
 
     name = models.TextField()
+    description = models.TextField(null=True)
     date = models.DateTimeField(null=True, blank=True, default=None)
     type = models.CharField(max_length=10, choices=ALLOWED_TYPES, default='scotland')
 
