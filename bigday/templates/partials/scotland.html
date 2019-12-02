@@ -125,8 +125,8 @@
                                 {% blocktrans %}A visit to the Scottish Crannog Center is recommended for kids and adults alike looking for a hands on learning experience of Iron age Scotland.
                                 <a target="_blank" href="https://www.crannog.co.uk/">Crannog Centre</a>.{%   endblocktrans %}
                         </p>
-                    </div>
                 </div>
+            </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="charity-box">
                     <img src="{% static 'bigday/images/scotland/stirling_castle.jpg' %}" class="img-responsive" alt="">
@@ -222,7 +222,7 @@
                     <img src="{% static 'bigday/images/scotland/edinburgh_castle.jpg' %}" class="img-responsive" alt="">
                     <h3>{% trans "Edinburgh Castle" %}</h3>
                     <p>
-                        {% blocktrans %}Historic fortress situated in Castle Rock.{% endblocktrans %}
+                        {% blocktrans %}Historic fortress situated on Castle Rock over Edinburgh. An important fortress in history of Scotland, the castle has been 26 sieges in its 1100 year history.{% endblocktrans %}
                     </p>
                 </div>
             </div>
@@ -231,6 +231,8 @@
                     <img src="{% static 'bigday/images/scotland/national_museum_scotland.jpg' %}" class="img-responsive" alt="">
                     <h3>{% trans "National Museum of Scotland" %}</h3>
                     <p>
+                            {% blocktrans %}Scotland's most popular visitor attraction. The collections dates back to 1780 and the foundation of the Society of Antiquaries in Scotland. The museum was formed from the merger of the Museum of Scotland and the Royal Scottish Museum in 2006. Admission is free.
+                            <a target="_blank" href="https://www.nms.ac.uk/national-museum-of-scotland/">National Museums Scotland</a>{% endblocktrans %}
                     </p>
                 </div>
             </div>
@@ -238,9 +240,21 @@
                 <div class="charity-box">
                     <img src="{% static 'bigday/images/scotland/national_gallery.jpg' %}" class="img-responsive" alt="">
                     <h3>{% trans "Scottish National Gallery" %}</h3>
-                    <p>
+                                        <p>
+                            {% blocktrans %}Housed in a neoclassical building in the heart of Edinburgh's city centre. This gallery features a wide ranging collection of Scottish and international paintings from the Renaiassance to the early 20th century. Addmission is free to the main gallery, please see website for current exhibitions.
+                            <a target="_blank" href="https://www.nationalgalleries.org/visit/scottish-national-gallery">Scottish National Gallery</a>{% endblocktrans %}
                     </p>
                 </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                    <div class="charity-box">
+                        <img src="{% static 'bigday/images/scotland/national_gallery.jpg' %}" class="img-responsive" alt="">
+                        <h3>{% trans "Scottish National Gallery of Modern Art" %}</h3>
+                        <p>
+                                {% blocktrans %}Contemporary art collection dating from about 1900, housed in two buildings facing each other across Belford Road. Home to a world famous collection of Surrealism including works from Salvador Dali and René Magritte. 
+                                <a target="_blank" href="https://www.nationalgalleries.org/visit/scottish-national-gallery-modern-art">Scottish National Gallery of Modern Art</a>{% endblocktrans %}
+                        </p>
+                    </div>
             </div>
         </div>
     </div>
