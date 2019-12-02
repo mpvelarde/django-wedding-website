@@ -19,11 +19,13 @@
         </section>
         <section class="col-md-6 text-center">
             <div class="invitation-details with-border">
-                <h2 class="text-center">{% trans "Details" %}</h2>
+                <h2 class="text-center">{{ invitation.event.name }}</h2>
                 <div class="clearfix"></div>
                 <dl class="dl-horizontal lead">
+                        <dt>{% trans "What" %}</dt>
+                        <dd>{{ invitation.event.description }}</dd>
                         <dt>{% trans "When" %}</dt>
-                        <dd>{% trans "Friday, May 1st, 2020, 2:00 pm" %}</dd>
+                        <dd>{{ invitation.event.date }}</dd>
                         <dt>{% trans "Where" %}</dt>
                         <dd>
                                 {% trans "Murrayshall Country House Hotel" %}<br>

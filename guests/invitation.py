@@ -44,7 +44,7 @@ def get_event_by_id_or_404(event_id):
 
 def get_invitation_context(party, invitation_id):
     return {
-        'title': "Lion's Head",
+        'title': "Invitation",
         'main_image': 'save-the-date-purple.jpeg',
         'main_color': '#ffffff',
         'font_color': '#000000',

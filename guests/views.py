@@ -53,7 +53,8 @@ def dashboard(request, event_id):
 
     count_rsvp_guests_yes = RSVP.objects.filter(is_attending=True, invitation__event=event).count()
     count_rsvp_guests_no = not_coming_guests.count()
-    count_invited_guests = Guest.objects.filter(party__is_invited=True).filter(Q(party__type=event.type) | Q(party__type='both')).count()
+    count_invited_guests = Guest.objects.filter(party__invitation__in=total_invites).count()
+
     return render(request, 'guests/dashboard.html', context={
         'event': event,
         'guests': count_rsvp_guests_yes,
