@@ -3,6 +3,7 @@
         <tr>
             <th>Guests</th>
             <th>Meal</th>
+            <th>Email</th>
         </tr>
     </thead>
     <tbody>
@@ -10,6 +11,7 @@
         <tr>
             <td>{{ rsvp.guest.name }}</td>
             <td>{{ rsvp.meal }}</td>
+            <td>{{ rsvp.guest.email }}</td>
         </tr>
     {% endfor %}
     </tbody>
