@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 22:31+0000\n"
+"POT-Creation-Date: 2019-12-08 17:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -409,9 +409,7 @@ msgid ""
 msgstr ""
 "Los fans del whiskey fan no se pueden perder un tour a una alguna de las "
 "distilerías de whiskey escocés.\n"
-"                    Las más cercanas están a una hora al norte de Dundee, "
-"justo en la entrada a las tierras altas:\n"
-"                    <a href=\"https://www.edradour.com\">Edradour</a>, <a "
+"<a href=\"https://www.edradour.com\">Edradour</a>, <a "
 "href=\"https://www.malts.com/en-gb/visit-our-distilleries/Blair-Athol"
 "\">Blair Athol</a>."
 
@@ -473,35 +471,113 @@ msgstr ""
 msgid "Dunkeld & The Hermitage"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:110
+#: bigday/templates/partials/scotland.html:104
+msgid ""
+"Woodland walk along the banks of the river Braan. Explore Ossian's cave, "
+"visit the spetacular Black Linn Falls waterfall and walk among the giant "
+"Douglas Fir trees.\n"
+"                            <a target=\"_blank\" href=\"https://www.nts.org."
+"uk/visit/places/the-hermitage\">The Hermitage</a>."
+msgstr ""
+"Bosque a las orillas del río Braan donde pueden encontrar la cueva de Ossian, "
+"visitar la cascada Black Linn.\n"
+"                            <a target=\"_blank\" href=\"https://www.nts.org."
+"uk/visit/places/the-hermitage\">The Hermitage</a>."
+
+#: bigday/templates/partials/scotland.html:112
 msgid "Pitlochry"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:118
+#: bigday/templates/partials/scotland.html:114
+msgid ""
+"Picturesque town on the banks of the river Tummel. Drop by the Queen's View "
+"over the Loch Tummel, named after Queen Victoria. Try hill walking up the "
+"well know hill Schiehallion. Or try white water rafting on the River "
+"Tummel.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"pitlochry.org/\">Pitlochry</a>.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"visitscotland.com/destinations-maps/pitlochry/see-do/\">Things To Do</a>."
+msgstr ""
+"Pueblo pintoresco a las orillas del río Tummel. Pasa por el mirador Queen's View "
+"sobre el lago Tummel. Puedes subir la loma de Schiehallion. "
+"O puedes hacer rafting en el río Tummel.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"pitlochry.org/\">Pitlochry</a>.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"visitscotland.com/destinations-maps/pitlochry/see-do/\">Cosas que hacer</a>."
+
+#: bigday/templates/partials/scotland.html:123
+msgid "The Scottish Crannog Centre"
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:125
+msgid ""
+"A visit to the Scottish Crannog Center is recommended for kids and adults "
+"alike looking for a hands on learning experience of Iron age Scotland.\n"
+"                                <a target=\"_blank\" href=\"https://www."
+"crannog.co.uk/\">Crannog Centre</a>."
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:133
 msgid "Stirling Castle"
 msgstr "Castillo de Stirling"
 
-#: bigday/templates/partials/scotland.html:126
+#: bigday/templates/partials/scotland.html:135
+msgid ""
+"One of the largest and most important castles in Scotland. It stands guard "
+"over what was until the 1890s the only crossing over the river Forth.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"stirlingcastle.scot/\">Stirling Castle</a>."
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:143
 msgid "Scone Palace"
 msgstr "Palacio de Scone"
 
-#: bigday/templates/partials/scotland.html:134
+#: bigday/templates/partials/scotland.html:145
+msgid ""
+"For 1000 years the crowning place of Scottish Kings. Explore the extensive "
+"grounds or take a guided tour through the rooms.\n"
+"                            <a target=\"_blank\" href=\"https://scone-palace."
+"co.uk/\">Scone Palace</a>."
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:153
 msgid "Loch Lomond"
 msgstr "Lago Lomond"
 
-#: bigday/templates/partials/scotland.html:142
+#: bigday/templates/partials/scotland.html:155
+msgid ""
+"A national park that marks the boundary between the the Scottish lowlands "
+"and the highlands. Take in the views or try out the extensive range or water "
+"sports on the lake.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"lochlomond-trossachs.org/\">National Park</a>."
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:163
 msgid "Glencoe"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:149
+#: bigday/templates/partials/scotland.html:165
+msgid ""
+"An famous glen or valley through the Scottish highlands. Take in the view "
+"with a stunning drive over the A82 or drive to bag some munros and go high "
+"walking.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"lochlomond-trossachs.org/\">National Park</a>."
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:172
 msgid "Edinburgh"
 msgstr "Edimburgo"
 
-#: bigday/templates/partials/scotland.html:154
+#: bigday/templates/partials/scotland.html:177
 msgid "Mary Kings Close"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:156
+#: bigday/templates/partials/scotland.html:179
 msgid ""
 "Discover Edinburgh's underground streets dated from the 1600's, a bit of "
 "history and ghost stories, better book in advance.\n"
@@ -513,11 +589,11 @@ msgstr ""
 "                        <a target=\"_blank\" href=\"https://www."
 "realmarykingsclose.com/\">Visita el sitio web para reservar un tour</a>"
 
-#: bigday/templates/partials/scotland.html:164
+#: bigday/templates/partials/scotland.html:187
 msgid "Jolly Judge"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:166
+#: bigday/templates/partials/scotland.html:189
 msgid ""
 "Small pub sitting on one of Edinburgh famous closes, where you can order a "
 "flight of local whiskies for a reasonable price."
@@ -525,11 +601,11 @@ msgstr ""
 "Pequeño pub en uno de los famosos callejones de Edimburgo, puedes pedir un "
 "flight de whiskies locales por un precio razonable."
 
-#: bigday/templates/partials/scotland.html:173
+#: bigday/templates/partials/scotland.html:196
 msgid "Banshee Labyrinth"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:175
+#: bigday/templates/partials/scotland.html:198
 msgid ""
 "Haunted-themed pub, build in Edinburgh's underground streets. It has a pub, "
 "cinema and a dance floor, fancy watching a movie in a dungeon?"
@@ -537,11 +613,11 @@ msgstr ""
 "Pub embrujado, construido en las calles subterráneas de Edimburgo. Tiene un "
 "bar, cine y pista de baile."
 
-#: bigday/templates/partials/scotland.html:182
+#: bigday/templates/partials/scotland.html:205
 msgid "Arthur Seat"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:184
+#: bigday/templates/partials/scotland.html:207
 msgid ""
 "Main peak of an extinct volcano, perfect for a hike close to the city "
 "centre. From here you can enjoy views of the city an the Firth of Forth."
@@ -549,11 +625,11 @@ msgstr ""
 "Cumbre de un volcán inactivo, perfecto para hacer senderismo cerca del "
 "centro de la ciudad. Mirador de la ciudad y el golfo de Forth."
 
-#: bigday/templates/partials/scotland.html:191
+#: bigday/templates/partials/scotland.html:214
 msgid "Calton Hill"
 msgstr ""
 
-#: bigday/templates/partials/scotland.html:193
+#: bigday/templates/partials/scotland.html:216
 msgid ""
 "If hiking is not your thing but still would love a view from the city, you "
 "can go up Calton Hill. Here you can also find several natinal monuments."
@@ -562,21 +638,46 @@ msgstr ""
 "ciudad, puedes subir a Calton Hill. Aquí también hay varios monumentos de "
 "Escocia."
 
-#: bigday/templates/partials/scotland.html:200
+#: bigday/templates/partials/scotland.html:223
 msgid "Edinburgh Castle"
 msgstr "Castillo de Edimburgo"
 
-#: bigday/templates/partials/scotland.html:202
-msgid "Historic fortress situated in Castle Rock."
-msgstr "Fortaleza histórica ubicada en Castle Rock."
+#: bigday/templates/partials/scotland.html:225
+msgid ""
+"Historic fortress situated on Castle Rock over Edinburgh. An important "
+"fortress in history of Scotland, the castle has been 26 sieges in its 1100 "
+"year history."
+msgstr ""
 
-#: bigday/templates/partials/scotland.html:209
+#: bigday/templates/partials/scotland.html:232
 msgid "National Museum of Scotland"
 msgstr "Museo Nacional de Escocia"
 
-#: bigday/templates/partials/scotland.html:217
+#: bigday/templates/partials/scotland.html:234
+msgid ""
+"Scotland's most popular visitor attraction. The collections dates back to "
+"1780 and the foundation of the Society of Antiquaries in Scotland. The "
+"museum was formed from the merger of the Museum of Scotland and the Royal "
+"Scottish Museum in 2006. Admission is free.\n"
+"                            <a target=\"_blank\" href=\"https://www.nms.ac."
+"uk/national-museum-of-scotland/\">National Museums Scotland</a>"
+msgstr ""
+
+#: bigday/templates/partials/scotland.html:242
 msgid "Scottish National Gallery"
 msgstr "Galería Nacional de Escocia"
+
+#: bigday/templates/partials/scotland.html:244
+msgid ""
+"Housed in a neoclassical building in the heart of Edinburgh's city centre. "
+"This gallery features a wide ranging collection of Scottish and "
+"international paintings from the Renaiassance to the early 20th century. "
+"Addmission is free to the main gallery, please see website for current "
+"exhibitions.\n"
+"                            <a target=\"_blank\" href=\"https://www."
+"nationalgalleries.org/visit/scottish-national-gallery\">Scottish National "
+"Gallery</a>"
+msgstr ""
 
 #: bigday/templates/partials/story.html:8
 msgid ""
@@ -2060,6 +2161,9 @@ msgstr "Comunidad Django"
 #: myvenv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:408
 msgid "Connect, get help, or contribute"
 msgstr "Conéctate, consigue ayuda, o contribuye"
+
+#~ msgid "Historic fortress situated in Castle Rock."
+#~ msgstr "Fortaleza histórica ubicada en Castle Rock."
 
 #~ msgid "Ceremony"
 #~ msgstr "Ceremonia"
