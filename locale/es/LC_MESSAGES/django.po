@@ -775,8 +775,6 @@ msgid "RSVP"
 msgstr ""
 
 #: guests/templates/guests/invitation.html:44
-#, fuzzy
-#| msgid "Please RSVP by February 2020"
 msgid "Please RSVP by January 2020"
 msgstr "Por favor confirmar asistencia antes de Enero del 2020"
 
