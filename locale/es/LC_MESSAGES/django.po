@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 22:44+0000\n"
+"POT-Creation-Date: 2020-09-02 23:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,8 +57,8 @@ msgid "Scone, Perth, UK"
 msgstr "Scone, Perth, Reino Unido"
 
 #: bigday/templates/home.html:52
-msgid "May 1st, 2020"
-msgstr "1 de mayo del 2020"
+msgid "July 15th, 2021"
+msgstr "15 de julio del 2021"
 
 #: bigday/templates/home.html:60
 msgid "Welcome!"
@@ -175,8 +175,8 @@ msgid "The official bit, a toast and a meal at lovely Murrayshall House Hotel"
 msgstr "La parte oficial, un brindis y comida en el Hotal Murrayshall"
 
 #: bigday/templates/partials/event.html:37
-msgid "Friday, May 1st, 2020, 2:00 pm"
-msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
+msgid "Thursday, July 15th, 2021, 2:00 pm"
+msgstr "Jueves 15 de julio del 2021, 2:00 pm"
 
 #: bigday/templates/partials/event.html:40
 #: bigday/templates/partials/event.html:70
@@ -196,9 +196,10 @@ msgid ""
 "Scotland has very strict drinking and driving rules, so for your peace of "
 "mind, we have hired a coach to pick up guests from Dundee and Perth. We have "
 "also arranged drop off for after the party."
-msgstr "Escocia tiene reglas muy estrictas sobre beber y manejar, para su tranquilidad, "
-"hemos contratado transporte para recoger invitados desde Perth o Dundee. "
-"También hemos organizado el regreso."
+msgstr ""
+"Escocia tiene reglas muy estrictas sobre beber y manejar, para su "
+"tranquilidad, hemos contratado transporte para recoger invitados desde Perth "
+"o Dundee. También hemos organizado el regreso."
 
 #: bigday/templates/partials/event.html:50
 msgid "Parking"
@@ -219,8 +220,8 @@ msgid ""
 msgstr "¡Acompáñanos a celebrar nuestro matrimonio con un ceilidh y un buffet!"
 
 #: bigday/templates/partials/event.html:67
-msgid "Friday, May 1st, 2020, 8:00 pm"
-msgstr "Viernes 1 de mayo de 2020, 8:00 pm"
+msgid "Thursday, July 15th, 2021, 8:00 pm"
+msgstr "Jueves 15 de julio del 2021, 8:00 pm"
 
 #: bigday/templates/partials/event.html:74
 msgid "Cocktail/Semi-Formal, put on your dancing shoes!"
@@ -2193,6 +2194,15 @@ msgstr "Comunidad Django"
 msgid "Connect, get help, or contribute"
 msgstr "Conéctate, consigue ayuda, o contribuye"
 
+#~ msgid "May 1st, 2020"
+#~ msgstr "1 de mayo del 2020"
+
+#~ msgid "Friday, May 1st, 2020, 2:00 pm"
+#~ msgstr "Viernes 1 de mayo de 2020, 2:00 pm"
+
+#~ msgid "Friday, May 1st, 2020, 8:00 pm"
+#~ msgstr "Viernes 1 de mayo de 2020, 8:00 pm"
+
 #~ msgid ""
 #~ "We will arrange bus pick up options for guests from Dundee/Perth. For "
 #~ "getting back there will taxis available."
@@ -2211,9 +2221,6 @@ msgstr "Conéctate, consigue ayuda, o contribuye"
 
 #~ msgid "Details"
 #~ msgstr "Detalles"
-
-#~ msgid "July 11th, 2020"
-#~ msgstr "11 de julio del 2020"
 
 #~ msgid "Cocktail/Semi-Formal"
 #~ msgstr "Cóctel/Semi-formal"
