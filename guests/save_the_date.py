@@ -18,16 +18,16 @@ SAVE_THE_DATE_CONTEXT_MAP = {
 
         'scotland': {
             'title': 'savethedate',
-            'header_filename': 'save-the-date-purple.jpeg',
-            'main_image': 'save-the-date-purple.jpeg',
+            'header_filename': 'invite-2021-purple.jpeg',
+            'main_image': 'invite-2021-purple.jpeg',
             'main_color': '#ffffff',
             'font_color': '#000000',
             'SITE_URL': settings.SITE_URL,
         },
         'ecuador': {
             'title': 'savethedate',
-            'header_filename': 'save-the-date-pink-es.jpeg',
-            'main_image': 'save-the-date-pink-es.jpeg',
+            'header_filename': 'invite-2021-pink.jpeg',
+            'main_image': 'invite-2021-pink.jpeg',
             'main_color': '#ffffff',
             'font_color': '#000000',
             'SITE_URL': settings.SITE_URL,

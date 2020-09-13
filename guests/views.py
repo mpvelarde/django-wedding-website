@@ -103,7 +103,7 @@ def invitation(request, invite_id):
         'invitation': invitation,
         'rsvps': rsvps,
         'meals': MEALS,
-        'main_image': 'save-the-date-purple.jpeg',
+        'main_image': 'invite-2021-purple.jpeg',
         'SITE_URL': settings.SITE_URL,
     })
 
